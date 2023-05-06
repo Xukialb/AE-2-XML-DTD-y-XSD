@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Biblioteca>
+    <libro Id="L0001" tipo_clase="novela" numpaginas="314">
+        <Titulo></Titulo>
+        <Capitulo numpaginas="12"></Capitulo>
+        <Capitulo numpaginas="10"></Capitulo>
+        <Capitulo numpaginas="12"></Capitulo>
+        <Indice></Indice>
+        <Sinopsis></Sinopsis>
+    </libro>
+        <libro Id="L0002" tipo_clase="infantil" numpaginas="124">
+
+    </libro>
+        <libro Id="L0003" tipo_clase="didactico" numpaginas="462">
+
+    </libro>
+    <periodico Id="P0001">
+    
+    </periodico>
+    <revista Id="R0001">
+    </revista>
+</Biblioteca>
