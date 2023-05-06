@@ -3,6 +3,7 @@
     <libro Id="L0001" tipo_clase="novela" numpaginas="314">
         <Titulo></Titulo>
         <Capitulo numpaginas="12"></Capitulo>
+            <Contenido inf="enlace"></Contenido>
         <Capitulo numpaginas="10"></Capitulo>
         <Capitulo numpaginas="12"></Capitulo>
         <Indice></Indice>
