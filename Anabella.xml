@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE biblioteca [
+   
+   <!ELEMENT biblioteca (libros, revistas, periódicos)>
+
+    <!ELEMENT libros (título, sinopsis, índice, capítulo)>
+    <!ATTLIST libros id #REQUIRED>
+    <!ATTLIST libros tipo_clase #REQUIRED>
+    <!ELEMENT título (#PCDATA)>
+    <!ELEMENT sinopsis (#PCDATA)>
+    <!ELEMENT índice (#PCDATA)>
+    <!ELEMENT capítulo (#PCDATA)>
+   <!ELEMENT contenido (#PCDATA)>
+
+    <!ELEMENT revistas (id, título, número, índice, sección, páginas)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT título (#PCDATA)>
+    <!ELEMENT número (#PCDATA)>
+    <!ELEMENT sección (#PCDATA)>
+    <!ELEMENT contenido (#PCDATA)>
+    <!ELEMENT páginas (#PCDATA)>
+
+    <!ELEMENT periódicos (sección, artículo)>
+    <!ATTLIST periódicos id #REQUIRED>
+    <!ATTLIST periódicos tipo_clase #REQUIRED>
+    <!ATTLIST periódicos fecha_publicación ID #REQUIRED>
+    <!ELEMENT sección (#PCDATA)>
+    <!ATTLIST sección tipo_seccion #REQUIRED>
+    <!ELEMENT artículo (#PCDATA)>
+    <!ATTLIST artículo autor #REQUIRED>
+    <!ELEMENT contenido (#PCDATA)>
+
+   ]>
+
+<libros>
+    <libro id="L123" tipo_clase: "novela">
+        <título>Nadie queda atrás</título>
+        <sinopsis>lslsmndd lskjdks laksjdsksksl</sinopsis>
+        <índice>
+            <capítulo id="L123C1" título: "Para comenzar" páginas="14"></capítulo>
+            <capítulo id="L123C2" título:"Silencio" páginas="11">
+            <capítulo id="L123C3" título:"Tiempo y esfuerzo" páginas="12"></capítulo>
+            <capítulo id="L123C4" título: "Seguir" páginas="16"></capítulo>
+            <capítulo id="L123C5" título: "Supremacía" páginas="12"></capítulo>
+                <contenido enlace="url"></contenido>
+            </capítulo>
+        </índice>
+
+    <libro id="L124" tipo_clase: "infantil">
+        <título>El zoo de Nano</título>
+        <sinopsis>lslsmndd lskjdks laksjdsksksl</sinopsis>
+        <índice>
+            <capítulo id="L124C1" título: "Animales felices" páginas="4"></capítulo>
+            <capítulo id="L124C2" título:"Animales escondidos" páginas="5">
+            <capítulo id="L124C3" título:"Hora de soñar" páginas="5"></capítulo>
+               <contenido enlace="url"></contenido>
+            </capítulo>
+        </índice>
+</libros>
+
+
+<revistas>
+    <revista id="R001" tipo_clase="coches">
+        <título>Lanzamientos 2023</título>
+        <número>1</número>
+        <índice>
+            <sección título="Lo nuevo para este año" páginas="8">
+              <contenido enlace="url"></contenido>                 
+            </sección>
+            <sección título="Estilo y sobriedad" páginas="5">
+            <contenido enlace="url"></contenido>  
+            </sección>
+            <sección título="Los más vendidos" páginas="10">
+              <contenido enlace="url"></contenido>                 
+            </sección>
+        </índice>
+        <páginas>23</páginas>
+    </revista>
+</revistas>
+
+<periódicos>
+   <periódico id="P101" tipo_clase="nacional" fecha_publicación="30/04/2023">
+   <sección tipo_seccion="Económica">
+        <artículo autor="Marta Rivas"></articulo>
+            <contenido enlace="url"></contenido>                 
+    </sección>
+</periódico>
+
+<periódico id="P102" tipo_clase="internacional" fecha_publicación="09/04/2023">
+   <sección tipo_seccion="Opinión">
+        <artículo autor="Sol Harf"></articulo>
+            <contenido enlace="url"></contenido>                 
+    </sección>
+   </periódico>
+</periódicos>
