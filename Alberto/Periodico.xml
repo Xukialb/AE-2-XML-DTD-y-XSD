@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Periodico Id="0519" tipo_clase="nacional" fecha_publicacion="2023/02/23">
+<Periodico Id="P0519" tipo_clase="nacional" fecha_publicacion="2023/02/23">
     <Seccion tipo_seccion="nacional">Cultura</Seccion>
-        <articulo autor=""></articulo>
+        <articulo autor="Roberto Fernandez"></articulo>
     <Seccion tipo_seccion="deportes">Deportes</Seccion>
+        <articulo autor="David Martinez"></articulo>
+    <Indice>
+    -Actualidad
+    -Navicional
+    -Internacional
+    -Local
+    -Cultura
+    -Deportes
+    -Eltiempo
+    -Anuncios
+    </Indice>
         <articulo autor=""></articulo>
-    <Indice></Indice>
 </Periodico>
