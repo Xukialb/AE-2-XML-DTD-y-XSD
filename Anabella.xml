@@ -2,95 +2,102 @@
 
 <!DOCTYPE biblioteca [
    
-   <!ELEMENT biblioteca (libros, revistas, periódicos)>
+    <!ELEMENT biblioteca (libros, revistas, periódicos)>
 
-    <!ELEMENT libros (título, sinopsis, índice, capítulo)>
-    <!ATTLIST libros id #REQUIRED>
-    <!ATTLIST libros tipo_clase #REQUIRED>
-    <!ELEMENT título (#PCDATA)>
+    <!ELEMENT libros (libro, título, sinopsis, índice, capítulo)>
+    <!ATTLIST libro id ID #REQUIRED>
+    <!ATTLIST libro tipo_clase (novela | infantil | didáctico) #REQUIRED>
+    <!ELEMENT título_libro (#PCDATA)>
     <!ELEMENT sinopsis (#PCDATA)>
     <!ELEMENT índice (#PCDATA)>
     <!ELEMENT capítulo (#PCDATA)>
-   <!ELEMENT contenido (#PCDATA)>
+    <!ELEMENT contenido_libro (#PCDATA)>
 
     <!ELEMENT revistas (id, título, número, índice, sección, páginas)>
     <!ELEMENT id (#PCDATA)>
-    <!ELEMENT título (#PCDATA)>
+    <!ELEMENT título_revista (#PCDATA)>
     <!ELEMENT número (#PCDATA)>
     <!ELEMENT sección (#PCDATA)>
-    <!ELEMENT contenido (#PCDATA)>
+    <!ELEMENT contenido_revista (#PCDATA)>
     <!ELEMENT páginas (#PCDATA)>
 
     <!ELEMENT periódicos (sección, artículo)>
-    <!ATTLIST periódicos id #REQUIRED>
-    <!ATTLIST periódicos tipo_clase #REQUIRED>
-    <!ATTLIST periódicos fecha_publicación ID #REQUIRED>
-    <!ELEMENT sección (#PCDATA)>
-    <!ATTLIST sección tipo_seccion #REQUIRED>
+    <!ATTLIST periódicos id ID #REQUIRED>
+    <!ATTLIST periódicos tipo_clase (nacional | internacional) #REQUIRED>
+    <!ATTLIST periódicos fecha_publicación (date) #REQUIRED>
+    <!ELEMENT sección_per (#PCDATA)>
+    <!ATTLIST sección tipo_seccion (económica | opinión | deportes | nacional | internacional. ) #REQUIRED>
     <!ELEMENT artículo (#PCDATA)>
-    <!ATTLIST artículo autor #REQUIRED>
+    <!ATTLIST artículo autor (name) #REQUIRED>
     <!ELEMENT contenido (#PCDATA)>
 
    ]>
 
-<libros>
-    <libro id="L123" tipo_clase: "novela">
+    <biblioteca>
+    <libros id="L123" tipo_clase:"novela">
         <título>Nadie queda atrás</título>
         <sinopsis>lslsmndd lskjdks laksjdsksksl</sinopsis>
         <índice>
-            <capítulo id="L123C1" título: "Para comenzar" páginas="14"></capítulo>
+            <capítulo id="L123C1" título: "Para comenzar" páginas="14">
+                 <contenido enlace="url"></contenido>
+            </capítulo>
             <capítulo id="L123C2" título:"Silencio" páginas="11">
+                 <contenido enlace="url"></contenido>
             <capítulo id="L123C3" título:"Tiempo y esfuerzo" páginas="12"></capítulo>
+                <contenido enlace="url"></contenido>
             <capítulo id="L123C4" título: "Seguir" páginas="16"></capítulo>
+                <contenido enlace="url"></contenido>
             <capítulo id="L123C5" título: "Supremacía" páginas="12"></capítulo>
                 <contenido enlace="url"></contenido>
             </capítulo>
-        </índice>
+        </índice>    
+    </libros>
 
-    <libro id="L124" tipo_clase: "infantil">
+    <libros id="L124" tipo_clase: "infantil">
         <título>El zoo de Nano</título>
         <sinopsis>lslsmndd lskjdks laksjdsksksl</sinopsis>
         <índice>
-            <capítulo id="L124C1" título: "Animales felices" páginas="4"></capítulo>
+            <capítulo id="L124C1" título: "Animales felices" páginas="4">
+                <contenido enlace="url"></contenido>
+            </capítulo>
             <capítulo id="L124C2" título:"Animales escondidos" páginas="5">
-            <capítulo id="L124C3" título:"Hora de soñar" páginas="5"></capítulo>
+                <contenido enlace="url"></contenido>
+            </capítulo>
+            <capítulo id="L124C3" título:"Hora de soñar" páginas="5">
                <contenido enlace="url"></contenido>
             </capítulo>
         </índice>
-</libros>
+    </libros>
 
 
-<revistas>
-    <revista id="R001" tipo_clase="coches">
+    <revistas id="R001" tipo_clase="coches">
         <título>Lanzamientos 2023</título>
         <número>1</número>
         <índice>
             <sección título="Lo nuevo para este año" páginas="8">
-              <contenido enlace="url"></contenido>                 
+                <contenido enlace="url"></contenido>                 
             </sección>
             <sección título="Estilo y sobriedad" páginas="5">
-            <contenido enlace="url"></contenido>  
+                <contenido enlace="url"></contenido>  
             </sección>
             <sección título="Los más vendidos" páginas="10">
-              <contenido enlace="url"></contenido>                 
+                <contenido enlace="url"></contenido>                 
             </sección>
         </índice>
         <páginas>23</páginas>
-    </revista>
-</revistas>
+   </revistas>
 
-<periódicos>
-   <periódico id="P101" tipo_clase="nacional" fecha_publicación="30/04/2023">
+
+   <periódicos id="P101" tipo_clase="nacional" fecha_publicación="30/04/2023">
    <sección tipo_seccion="Económica">
-        <artículo autor="Marta Rivas"></articulo>
+        <artículo autor="Marta Rivas">Nuevos fondos de inversión</articulo>
             <contenido enlace="url"></contenido>                 
     </sección>
-</periódico>
-
-<periódico id="P102" tipo_clase="internacional" fecha_publicación="09/04/2023">
-   <sección tipo_seccion="Opinión">
-        <artículo autor="Sol Harf"></articulo>
-            <contenido enlace="url"></contenido>                 
-    </sección>
-   </periódico>
 </periódicos>
+
+<periódicos id="P102" tipo_clase="internacional" fecha_publicación="09/04/2023">
+   <sección tipo_seccion="Opinión">
+        <artículo autor="Sol Harf">"Tensión en medio oriente"</articulo>
+            <contenido enlace="url"></contenido>                 
+    </sección>
+   </periódicos>
