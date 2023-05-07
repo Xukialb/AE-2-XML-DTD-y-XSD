@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Biblioteca>
+    <Libro Id="L7514" tipo_clase="novela" num_paginas="522">
+        <Título>La sombra del viento</Título>
+        <Autor>Carlos Ruiz Zafon</Autor>
+        <Sinopsis>Barcelona, 1945: Un muchacho, Daniel Sempere, es llevado por su padre a un misterioso lugar en el corazón del casco antiguo: El Cementerio de los Libros Olvidados. Allí, Daniel encuentra un libro llamado La Sombra del Viento, por Julián Carax, que cambiará su vida para siempre. A medida que Daniel investiga la vida y obra de Carax, se ve arrastrado a un peligroso laberinto de secretos y intrigas que lo llevan al corazón de la Barcelona de la posguerra.</Sinopsis>            
+        <Indice>
+            <capítulo num_paginas="10">Prólogo: La Sombra del Viento</capítulo>
+                <contenido información="urlcap00">El contenido del prólogo.</contenido>    
+            <capítulo num_paginas="25">Capítulo 1: La Ciudad de los Prodigios</capítulo>
+                <contenido información="urlcap01">El contenido del primer capítulo.</contenido>
+            <capítulo num_paginas="32">Capítulo 2: La Penumbra de los Sentidos</capítulo>
+                <contenido información="urlcap02">El contenido del segundo capítulo.</contenido>
+            <capítulo num_paginas="18">Capítulo 3: El Cementerio de los Libros Olvidados</capítulo>
+                <contenido información="urlcap03">El contenido del tercer capítulo.</contenido>
+            <capítulo num_paginas="22">Capítulo 4: La Ciudad de las Damas</capítulo>
+                <contenido información="urlcap04">El contenido del cuarto capítulo.</contenido>
+            <capítulo num_paginas="14">Capítulo 5: La Dama del Anís</capítulo>
+                <contenido información="urlcap05">El contenido del quinto capítulo.</contenido>
+            <capítulo num_paginas="19">Capítulo 6: El Palacio de la Medianoche</capítulo>
+                <contenido información="urlcap06">El contenido del sexto capítulo.</contenido>
+            <capítulo num_paginas="28">Capítulo 7: La Mujer de Vapor</capítulo>
+                <contenido información="urlcap07">El contenido del septimo capítulo.</contenido>
+            <capítulo num_paginas="27">Capítulo 8: El Prisionero del Cielo</capítulo>
+                <contenido información="urlcap08">El contenido del octavo capítulo.</contenido>
+            <capítulo num_paginas="16">Capítulo 9: El Dominio de las Sombras</capítulo>
+                <contenido información="urlcap09">El contenido del noveno capítulo.</contenido>
+            <capítulo num_paginas="20">Capítulo 10: El Cementerio de los Libros Olvidados II</capítulo>
+                <contenido información="urlcap10">El contenido del decimo capítulo.</contenido>
+        </Indice>
+        <Año_publicación>2001</Año_publicación>
+        <Editorial>Planeta</Editorial>      
+    </Libro>
+
+    <Libro Id="L6214" tipo_clase="infantil" num_paginas="90">
+        <Título>El Principito</Título>
+        <Autor>Antoine de Saint-Exupéry</Autor>
+        <Sinopsis>Un aviador se encuentra perdido en el desierto del Sahara después de que su avión se estrella. Allí, conoce a un pequeño príncipe que viene de otro planeta. El príncipe relata sus aventuras a través de una serie de personajes que ha conocido en sus viajes, y juntos descubren el valor de la amistad, el amor y la vida misma.</Sinopsis>
+        <Indice>
+            <capitulo num_paginas="6">Capítulo 1: El Aviador</capitulo>
+                <contenido información="hrefcap01">El contenido del primer capítulo.</contenido> 
+            <capitulo num_paginas="10">Capítulo 2: El Pequeño Príncipe</capitulo>
+                <contenido información="hrefcap02">El contenido del segundo capítulo.</contenido>    
+            <capitulo num_paginas="10">Capítulo 3: El Asteroide B 612</capitulo>
+                <contenido información="hrefcap03">El contenido del tercer capítulo.</contenido>
+            <capitulo num_paginas="15">Capítulo 4: El Viaje del Pequeño Príncipe</capitulo>
+                <contenido información="hrefcap04">El contenido del cuarto capítulo.</contenido>
+            <capitulo num_paginas="10">Capítulo 5: Los Personajes del Pequeño Príncipe</capitulo>
+                <contenido información="hrefcap05">El contenido del quinto capítulo.</contenido>
+            <capitulo num_paginas="10">Capítulo 6: El Zorro</capitulo>
+            <capitulo num="6">Capítulo 7: El Regreso a Casa</capitulo>
+        </Indice> 
+        <Año_publicación>1943</Año_publicación>
+        <Editorial>Argentina</Editorial>
+    </Libro>
+
+    <Periodico Id="P0519" tipo_clase="nacional" fecha_publicacion="2023/02/23">
+        <Seccion tipo_seccion="nacional">Deportes</Seccion>
+            <articulo autor="Roberto Fernandez">Messi anota tres goles en la victoria del PSG</articulo>
+        <Seccion tipo_seccion="deportes">Deportes</Seccion>
+            <articulo autor="David Martinez">Real Madrid se prepara para las semifinales de la Liga de Campeones</articulo>
+        <Indice>
+            -Actualidad
+            -Navicional
+            -Internacional
+            -Local
+            -Cultura
+            -Deportes
+            -Eltiempo
+            -Anuncios
+        </Indice>
+        <articulo autor="Carlos Pérez">El Real Madrid campeón de la Copa de Rey</articulo>
+    </Periodico>
+
+
+    <Revista Id="R0561" tipo_clase="coches" num_paginas="52">
+        <Titulo>CocheActual</Titulo>
+        <Numero>85</Numero>
+        <Indice_de_contenido>
+            -Sumario
+            -Actualidad
+            -Analisis a fondo
+            -Anuncios
+        </Indice_de_contenido>
+        <Seccion num_paginas="2">Actualidad</Seccion>
+        <Contenido informacion="https://www.cocheactual.com/reducir-las-emisiones-del-vehiculo-reduciendo-su-masa/">Reducir las emisiones del vehículo reduciendo su masa</Contenido>
+        <Seccion num_paginas="4">Anuncios</Seccion>
+        <Contenido informacion="https://www.cocheactual.com/reparacion-de-abolladuras-sin-pintar-o-tecnicas-pdr/">Reparación de abolladuras sin pintar o técnicas PDR</Contenido>
+    </Revista>
+
+
+</Biblioteca>
