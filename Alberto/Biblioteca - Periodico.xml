@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Biblioteca>
+    <Periodico Id="P0519" tipo_clase="nacional" fecha_publicacion="2023/02/23">
+        <Seccion tipo_seccion="nacional">Deportes</Seccion>
+            <articulo autor="Roberto Fernandez">Messi anota tres goles en la victoria del PSG</articulo>
+        <Seccion tipo_seccion="deportes">Deportes</Seccion>
+            <articulo autor="David Martinez">Real Madrid se prepara para las semifinales de la Liga de Campeones</articulo>
+        <Indice>
+            -Actualidad
+            -Navicional
+            -Internacional
+            -Local
+            -Cultura
+            -Deportes
+            -Eltiempo
+            -Anuncios
+        </Indice>
+        <articulo autor="Carlos Pérez">El Real Madrid campeón de la Copa de Rey</articulo>
+    </Periodico>
+</Biblioteca>

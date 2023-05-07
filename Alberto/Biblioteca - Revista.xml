@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Biblioteca>
+    <Revista Id="R0561" tipo_clase="coches" num_paginas="52">
+        <Titulo>CocheActual</Titulo>
+        <Numero>85</Numero>
+        <Indice_de_contenido>
+            -Sumario
+            -Actualidad
+            -Analisis a fondo
+            -Anuncios
+        </Indice_de_contenido>
+        <Seccion num_paginas="2">Actualidad</Seccion>
+            <Contenido informacion="https://www.cocheactual.com/reducir-las-emisiones-del-vehiculo-reduciendo-su-masa/">Reducir las emisiones del vehículo reduciendo su masa</Contenido>
+        <Seccion num_paginas="4">Anuncios</Seccion>
+            <Contenido informacion="https://www.cocheactual.com/reparacion-de-abolladuras-sin-pintar-o-tecnicas-pdr/">Reparación de abolladuras sin pintar o técnicas PDR</Contenido>
+    </Revista>
+</Biblioteca>
