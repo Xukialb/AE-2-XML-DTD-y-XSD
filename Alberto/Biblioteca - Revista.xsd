@@ -11,31 +11,37 @@
     <element name="Biblioteca">
         <complexType>
             <sequence>
-                <element name="Titulo" type="string" />
-                <element name="Número" type="integer" />
-                <element name="Indice_de_contenido" type="string" />
-                <element name="Secciones"> 
+                <element name="Revista" type="string">
                     <complexType>
                         <sequence>
-                            <element name="Sección" type="string">
+                            <element name="Titulo" type="string" />
+                            <element name="Número" type="integer" />
+                            <element name="Indice_de_contenido" type="string" />
+                            <element name="Secciones"> 
                                 <complexType>
                                     <sequence>
-                                        <element name="Contenido" type="string">
+                                        <element name="Sección" type="string">
                                             <complexType>
-                                                <attribute name="información" type="string" use="required"></attribute>
+                                                <sequence>
+                                                    <element name="Contenido" type="string">
+                                                        <complexType>
+                                                            <attribute name="información" type="string" use="required"></attribute>
+                                                        </complexType>
+                                                    </element>   
+                                                </sequence>
+                                                    <attribute name="num_paginas" type="integer" use="required"></attribute>
                                             </complexType>
-                                        </element>   
+                                        </element>            
                                     </sequence>
-                                        <attribute name="num_paginas" type="integer" use="required"></attribute>
                                 </complexType>
-                            </element>            
-                        </sequence>
-                    </complexType>
-                </element> 
-            </sequence> 
-            <attribute name="Id" type="string" use="required"></attribute>
-            <attribute name="tipo_clase" type="string" use="required"></attribute>
-            <attribute name="num_paginas" type="integer" use="required"></attribute>  
-        </complexType>        
+                            </element> 
+                        </sequence> 
+                            <attribute name="Id" type="string" use="required"></attribute>
+                            <attribute name="tipo_clase" type="string" use="required"></attribute>
+                            <attribute name="num_paginas" type="integer" use="required"></attribute>  
+                    </complexType> 
+                </element>            
+            </sequence>
+        </complexType>
     </element>                
 </schema>    

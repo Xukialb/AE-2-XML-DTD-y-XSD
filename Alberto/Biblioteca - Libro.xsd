@@ -11,35 +11,41 @@
     <element name="Biblioteca">
         <complexType>
             <sequence>
-                <element name="Titulo" type="string" />
-                <element name="Autor" type="string" minOccurs="1" maxOccurs="unbounded" />
-                <element name="Sinopsis" type="string" />
-                <element name="Indice">
+                <element name="Libro">
                     <complexType>
                         <sequence>
-                            <element name="Capítulo" type="string">
-                                <complexType>
-                                    <attribute name="páginas" type="integer" use="required"></attribute>
-                                </complexType>
-                            </element>
+                            <element name="Titulo" type="string" />
+                            <element name="Autor" type="string" minOccurs="1" maxOccurs="unbounded" />
+                            <element name="Sinopsis" type="string" />
+                            <element name="Indice">
                                 <complexType>
                                     <sequence>
-                                        <element name="Contenido" type="string">
+                                        <element name="Capítulo" type="string">
                                             <complexType>
-                                                <attribute name="información" type="string" use="required"></attribute>
+                                                <attribute name="páginas" type="integer" use="required"></attribute>
                                             </complexType>
                                         </element>
+                                            <complexType>
+                                                <sequence>
+                                                    <element name="Contenido" type="string">
+                                                        <complexType>
+                                                            <attribute name="información" type="string" use="required"></attribute>
+                                                        </complexType>
+                                                    </element>
+                                                </sequence>
+                                            </complexType>    
                                     </sequence>
                                 </complexType>
+                            </element>
+                            <element name="Año_de_publicación" type="string" />
+                            <element name="Editorial" type="string" minOccurs="1" maxOccurs="unbounded" />
                         </sequence>
+                            <attribute name="Id" type="string" use="required"></attribute>
+                            <attribute name="tipo_clase" type="string" use="required"></attribute>
+                            <attribute name="num_paginas" type="integer" use="required"></attribute>
                     </complexType>
-                </element>
-                <element name="Año_de_publicación" type="string" />
-                <element name="Editorial" type="string" minOccurs="1" maxOccurs="unbounded" />
-            </sequence>
-            <attribute name="Id" type="string" use="required"></attribute>
-            <attribute name="tipo_clase" type="string" use="required"></attribute>
-            <attribute name="num_paginas" type="integer" use="required"></attribute>
+                </element>    
+            </sequence> 
         </complexType>
     </element>                
 </schema>
