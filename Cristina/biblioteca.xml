@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libros,periodicos,revistas)>
+
+      <!ELEMENT libros (libro+)>
+       <!ELEMENT  libro (titulo_libro,capitulos, indice_libro,sinopsis)>
+        <!ELEMENT titulo_libro (#PCDATA)>
+        <!ELEMENT capitulos (capitulo+)>
+        <!ELEMENT indice_libro (#PCDATA)>
+        <!ELEMENT sinopsis (#PCDATA)>
+          <!ELEMENT capitulo (cap_titulo,cap_contenido)>
+           <!ELEMENT cap_titulo (#PCDATA)>
+           <!ELEMENT cap_contenido (#PCDATA)>
+
+    <!ELEMENT periodicos (periodico+)>     
+     <!ELEMENT periodico (secciones_periodico,indice_periodico,contenido_periodico)>
+       <!ELEMENT secciones_periodico (seccion_per+)>
+       <!ELEMENT indice_periodico (#PCDATA)>
+       <!ELEMENT contenido_periodico (#PCDATA)>
+        <!ELEMENT seccion_per (articulo)>
+         <!ELEMENT articulo (#PCDATA)> 
+      
+    <!ELEMENT revistas (revista+)>
+      <!ELEMENT revista (titulo_revista, numero,indice_revista,contenido_revista,secciones_revista)>
+        <!ELEMENT titulo_revista (#PCDATA)>
+        <!ELEMENT numero (#PCDATA)>
+        <!ELEMENT indice_revista (#PCDATA)>
+        <!ELEMENT contenido_revista (#PCDATA)>
+        <!ELEMENT secciones_revista (seccion_rev+)>
+          <!ELEMENT seccion_rev (contenido)>
+           <!ELEMENT contenido (#PCDATA)>
+
+     <!ATTLIST libro id ID #REQUIRED>
+     <!ATTLIST libro tipo_clase (Novela |Infantil|Didactico) #REQUIRED>
+     <!ATTLIST libro num_paginas CDATA #REQUIRED>
+        <!ATTLIST capitulo id ID #REQUIRED>
+        <!ATTLIST capitulo num_paginas CDATA #REQUIRED>
+         <!ATTLIST cap_contenido informacion CDATA #REQUIRED>
+
+     <!ATTLIST periodico id ID #REQUIRED>
+     <!ATTLIST periodico tipo_clase (Nacional |Internacional) #REQUIRED>
+     <!ATTLIST periodico fecha_publicacion CDATA #REQUIRED>
+       <!ATTLIST seccion_per tipo CDATA #REQUIRED>
+       <!ATTLIST articulo autor CDATA #REQUIRED>
+       <!ATTLIST contenido_periodico inform CDATA #REQUIRED>
+
+
+    <!ATTLIST revista id ID #REQUIRED>
+     <!ATTLIST revista tipo_clase ( Informatica | Investigacion | Corazon) #REQUIRED>
+     <!ATTLIST revista num_paginas CDATA #REQUIRED>
+       <!ATTLIST seccion_rev tipo CDATA #REQUIRED>
+       <!ATTLIST seccion_rev num_paginas CDATA #REQUIRED>
+         <!ATTLIST contenido informacion CDATA #REQUIRED>
+
+
+]>
+
+<biblioteca>
+  <libros>
+     <libro id="L1234" tipo_clase="Novela" num_paginas="365">
+        <titulo_libro> El jardin embrujado </titulo_libro>
+        <capitulos>  
+           <capitulo id="Uno" num_paginas="5">
+             <cap_titulo>Capitulo 1</cap_titulo>
+             <cap_contenido informacion="url.capitulo1">info.cap</cap_contenido> 
+           </capitulo>
+           <capitulo id="Dos" num_paginas="12">
+              <cap_titulo>Capitulo 2</cap_titulo>
+              <cap_contenido informacion="url.capitulo2">info.cap</cap_contenido> 
+           </capitulo>
+           <capitulo id="Tres" num_paginas="23">
+             <cap_titulo>Capitulo 3</cap_titulo>
+             <cap_contenido informacion="url.capitulo3">info.cap</cap_contenido> 
+           </capitulo>
+        </capitulos>
+        <indice_libro> Indice</indice_libro>
+        <sinopsis> Sinopsis </sinopsis>
+     </libro>     
+
+     <libro id="L3456" tipo_clase="Infantil" num_paginas="32">
+        <titulo_libro> Zoe es una princesa </titulo_libro>
+        <capitulos>  
+           <capitulo id="Parte1" num_paginas="2">
+             <cap_titulo>Capitulo 1</cap_titulo>
+             <cap_contenido informacion="url.capitulo1">info.cap</cap_contenido> 
+           </capitulo>
+           <capitulo id="Parte2" num_paginas="4">
+             <cap_titulo>Capitulo 2</cap_titulo>
+             <cap_contenido informacion="url.capitulo2">info.cap</cap_contenido> 
+           </capitulo>
+           <capitulo id="Parte3" num_paginas="4">
+             <cap_titulo>Capitulo 3</cap_titulo>
+             <cap_contenido informacion="url.capitulo3">info.cap</cap_contenido> 
+           </capitulo>
+        </capitulos>
+        <indice_libro> Indice</indice_libro>
+        <sinopsis> Sinopsis </sinopsis>
+     </libro>   
+
+     <libro id="L7891" tipo_clase="Didactico" num_paginas="165">
+        <titulo_libro> Botanica </titulo_libro>
+        <capitulos>  
+           <capitulo id="Primero" num_paginas="6">
+             <cap_titulo>Capitulo 1</cap_titulo>
+             <cap_contenido informacion="url.capitulo1">info.cap</cap_contenido> 
+           </capitulo>
+           <capitulo id="Segundo" num_paginas="10">
+             <cap_titulo>Capitulo 2</cap_titulo>
+             <cap_contenido informacion="url.capitulo2">info.cap</cap_contenido> 
+           </capitulo>
+           <capitulo id="Tercero" num_paginas="14">
+             <cap_titulo>Capitulo 3</cap_titulo>
+             <cap_contenido informacion="url.capitulo3">info.cap</cap_contenido> 
+           </capitulo>
+        </capitulos>
+        <indice_libro> Indice</indice_libro>
+        <sinopsis> Sinopsis </sinopsis>
+      </libro>  
+    </libros> 
+
+     <periodicos>
+       <periodico id="P2345" tipo_clase="Nacional" fecha_publicacion="03/04/2015">
+         <secciones_periodico> 
+            <seccion_per tipo="Economia">
+               <articulo autor="Ronaldo Espinosa">La crisis economica en los estados europeos</articulo>
+            </seccion_per> 
+            <seccion_per tipo="Opinion" >
+               <articulo autor="Ivan Romero">Los peligros ocultos del avance de la IA</articulo>
+            </seccion_per>
+            <seccion_per tipo="Deportes">
+               <articulo autor="Sara Hernandez">Los ganadores de la Champions</articulo>
+            </seccion_per>
+            <seccion_per tipo="Nacional"> 
+               <articulo autor="Ivan Romero">Los cambios en la politica nacional</articulo>
+            </seccion_per>
+            <seccion_per tipo="Internacional">
+                <articulo autor="Fernando Garzon">Impacto del cambio climatico en la economia global</articulo>
+            </seccion_per>
+         </secciones_periodico>
+         <indice_periodico> Indice </indice_periodico>
+         <contenido_periodico inform="url.periodico">Contenido</contenido_periodico>
+       </periodico>  
+
+
+       <periodico id="P3984" tipo_clase="Internacional" fecha_publicacion="19/09/2019">
+         <secciones_periodico> 
+           <seccion_per tipo="Economia">
+               <articulo autor="Frank Donalson">La gran crisis de Estados Unidos</articulo>
+           </seccion_per> 
+           <seccion_per tipo="Opinion" >
+               <articulo autor="Ray Stuart">Los peligros del cambio de ideologia de las nuevas generaciones </articulo>
+           </seccion_per>
+           <seccion_per tipo="Deportes">
+               <articulo autor="Sandra Clinton">La exclusion de los atletas rusos en las olimpiadas</articulo>
+           </seccion_per>
+           <seccion_per tipo="Internacional">
+               <articulo autor="Boris Jonson">Impacto del cambio climatico en la economia global</articulo>
+           </seccion_per>
+         </secciones_periodico>
+         <indice_periodico> Indice </indice_periodico>
+         <contenido_periodico inform="url.periodico">Contenido</contenido_periodico>
+       </periodico>  
+    </periodicos>
+
+   <revistas>
+     <revista id="R9634" tipo_clase="Informatica" num_paginas="12">
+         <titulo_revista>Mundo Digital</titulo_revista>
+         <numero>234</numero>
+         <indice_revista>Indice </indice_revista>
+         <contenido_revista>Contenido</contenido_revista>
+         <secciones_revista>
+            <seccion_rev tipo="Lo ultimo en tecnologia" num_paginas="3">
+              <contenido informacion="url.seccion1">Contenido </contenido>
+            </seccion_rev>
+            <seccion_rev tipo="Nuevos avances tecnologicos" num_paginas="4">
+               <contenido informacion="url.seccion2">Contenido </contenido>
+            </seccion_rev>
+             <seccion_rev tipo="Emprendimiento" num_paginas="2">
+                <contenido informacion="url.seccion3">Contenido </contenido>
+            </seccion_rev>
+         </secciones_revista>
+     </revista>
+    
+
+     <revista id="R3456" tipo_clase="Investigacion" num_paginas="16">
+         <titulo_revista>Equipo de investigacion</titulo_revista>
+         <numero>42</numero>
+         <indice_revista>Indice </indice_revista>
+         <contenido_revista>Contenido </contenido_revista>
+         <secciones_revista>
+            <seccion_rev tipo="Novedades" num_paginas="3">
+              <contenido informacion="url.seccion1">Contenido </contenido>
+            </seccion_rev>
+            <seccion_rev tipo="Desarollo" num_paginas="2">
+               <contenido informacion="url.seccion2">Contenido </contenido>
+            </seccion_rev>
+             <seccion_rev tipo="Curisidades" num_paginas="4">
+                <contenido informacion="url.seccion3">Contenido </contenido>
+            </seccion_rev>
+         </secciones_revista>
+      </revista>
+
+      <revista id="R3536" tipo_clase="Corazon" num_paginas="16">
+         <titulo_revista>Lola</titulo_revista>
+         <numero>1235</numero>
+         <indice_revista>Indice </indice_revista>
+         <contenido_revista>Contenido </contenido_revista>
+         <secciones_revista>
+            <seccion_rev tipo="La bodas del mes " num_paginas="3">
+              <contenido informacion="url.seccion1">Contenido </contenido>
+            </seccion_rev>
+            <seccion_rev tipo="Lo ultimo de la temporada " num_paginas="2">
+               <contenido informacion="url.seccion2">Contenido </contenido>
+            </seccion_rev>
+             <seccion_rev tipo="Moda" num_paginas="4">
+                 <contenido informacion="url.seccion3">Contenido </contenido>
+            </seccion_rev>
+         </secciones_revista>
+       </revista>
+      </revistas>
+</biblioteca>
