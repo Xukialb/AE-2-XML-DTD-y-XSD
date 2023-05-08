@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Biblioteca [
+    <!ELEMENT Biblioteca (Libro*)>
+
+    <!ELEMENT Libro (Título,Autor?,Sinopsis,Indice,Año_publicación?,Editorial?)>
+    <!ATTLIST Libro Id ID #REQUIRED>
+    <!ATTLIST Libro tipo_clase (novela | infantil | didáctico) #REQUIRED>
+    <!ATTLIST Libro num_paginas CDATA #REQUIRED>
+    <!ELEMENT Título (#PCDATA)>
+    <!ELEMENT Autor (#PCDATA)>
+    <!ELEMENT Sinopsis (#PCDATA)>
+    <!ELEMENT Indice (Capítulo*)>
+
+    <!ELEMENT Capítulo (Contenido*)>
+    <!ATTLIST Capítulo páginas CDATA #REQUIRED> 
+
+    <!ELEMENT Contenido (#PCDATA)>
+    <!ATTLIST Contenido información CDATA #REQUIRED>
+
+    <!ELEMENT Año_publicación (#PCDATA)>
+    <!ELEMENT Editorial (#PCDATA)>
+]>
+<Biblioteca>
+    <Libro Id="L7514" tipo_clase="novela" num_paginas="522">
+        <Título>La sombra del viento</Título>
+        <Autor>Carlos Ruiz Zafon</Autor>
+        <Sinopsis>Barcelona, 1945: Un muchacho, Daniel Sempere, es llevado por su padre a un misterioso lugar en el corazón del casco antiguo: El Cementerio de los Libros Olvidados. Allí, Daniel encuentra un libro llamado La Sombra del Viento, por Julián Carax, que cambiará su vida para siempre. A medida que Daniel investiga la vida y obra de Carax, se ve arrastrado a un peligroso laberinto de secretos y intrigas que lo llevan al corazón de la Barcelona de la posguerra.</Sinopsis>            
+        <Indice>
+            <Capítulo páginas="10">
+                <Contenido información="gag">Prólogo: La Sombra del Viento</Contenido>
+            </Capítulo>                       
+            <Capítulo páginas="25">
+                <Contenido información="fda">Capítulo 1: La Ciudad de los Prodigios</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="32">
+                <Contenido información="rwqt">Capítulo 2: La Penumbra de los Sentidos</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="18">
+                <Contenido información="nrt">Capítulo 3: El Cementerio de los Libros Olvidados</Contenido> 
+            </Capítulo>                   
+            <Capítulo páginas="22">
+                <Contenido información="ewq">Capítulo 4: La Ciudad de las Damas</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="14">
+                <Contenido información="kiy">Capítulo 5: La Dama del Anís</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="19">
+                <Contenido información="gfs">Capítulo 6: El Palacio de la Medianoche</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="28">
+                <Contenido información="fwe">Capítulo 7: La Mujer de Vapor</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="27">
+                <Contenido información="iuyl">Capítulo 8: El Prisionero del Cielo</Contenido>                
+            </Capítulo>
+            <Capítulo páginas="16">
+                <Contenido información="sDSF">Capítulo 9: El Dominio de las Sombras</Contenido>                
+            </Capítulo>
+            <Capítulo páginas="20">
+                <Contenido información="eqd">Capítulo 10: El Cementerio de los Libros Olvidados II</Contenido> 
+            </Capítulo>
+        </Indice>
+        <Año_publicación>2001</Año_publicación>
+        <Editorial>Planeta</Editorial>      
+    </Libro>    
+</Biblioteca>
