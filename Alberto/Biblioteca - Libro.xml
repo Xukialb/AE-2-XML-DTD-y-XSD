@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE Biblioteca [
     <!ELEMENT Biblioteca (Libro*)>
 
@@ -7,46 +6,50 @@
     <!ATTLIST Libro Id ID #REQUIRED>
     <!ATTLIST Libro tipo_clase (novela | infantil | didáctico) #REQUIRED>
     <!ATTLIST Libro num_paginas CDATA #REQUIRED>
-
     <!ELEMENT Título (#PCDATA)>
     <!ELEMENT Autor (#PCDATA)>
     <!ELEMENT Sinopsis (#PCDATA)>
     <!ELEMENT Indice (Capítulo*)>
 
     <!ELEMENT Capítulo (Contenido*)>
-    <!ATTLIST Capítulo páginas CDATA #REQUIRED>    
-    
+    <!ATTLIST Capítulo páginas CDATA #REQUIRED> 
+
     <!ELEMENT Contenido (#PCDATA)>
     <!ATTLIST Contenido información CDATA #REQUIRED>
 
     <!ELEMENT Año_publicación (#PCDATA)>
     <!ELEMENT Editorial (#PCDATA)>
-    
 ]>
-
 <Biblioteca>
-
     <Libro Id="L7514" tipo_clase="novela" num_paginas="522">
         <Título>La sombra del viento</Título>
         <Autor>Carlos Ruiz Zafon</Autor>
         <Sinopsis>Barcelona, 1945: Un muchacho, Daniel Sempere, es llevado por su padre a un misterioso lugar en el corazón del casco antiguo: El Cementerio de los Libros Olvidados. Allí, Daniel encuentra un libro llamado La Sombra del Viento, por Julián Carax, que cambiará su vida para siempre. A medida que Daniel investiga la vida y obra de Carax, se ve arrastrado a un peligroso laberinto de secretos y intrigas que lo llevan al corazón de la Barcelona de la posguerra.</Sinopsis>            
         <Indice>
-            <Capítulo páginas="4"></Capítulo>
-                 
+            <Capítulo páginas="10"></Capítulo>
+                <Contenido información="gag">Prólogo: La Sombra del Viento</Contenido>                   
+            <Capítulo páginas="25"></Capítulo>
+                <Contenido información="fda">Capítulo 1: La Ciudad de los Prodigios</Contenido>                
+            <Capítulo páginas="32"></Capítulo>
+                <Contenido información="rwqt">Capítulo 2: La Penumbra de los Sentidos</Contenido>                
+            <Capítulo páginas="18"></Capítulo>
+                <Contenido información="nrt">Capítulo 3: El Cementerio de los Libros Olvidados</Contenido>                
+            <Capítulo páginas="22"></Capítulo>
+                <Contenido información="ewq">Capítulo 4: La Ciudad de las Damas</Contenido>                
+            <Capítulo páginas="14"></Capítulo>
+                <Contenido información="kiy">Capítulo 5: La Dama del Anís</Contenido>                
+            <Capítulo páginas="19"></Capítulo>
+                <Contenido información="gfs">Capítulo 6: El Palacio de la Medianoche</Contenido>                
+            <Capítulo páginas="28"></Capítulo>
+                <Contenido información="fwe">Capítulo 7: La Mujer de Vapor</Contenido>                
+            <Capítulo páginas="27"></Capítulo>
+                <Contenido información="iuyl">Capítulo 8: El Prisionero del Cielo</Contenido>                
+            <Capítulo páginas="16"></Capítulo>
+                <Contenido información="sDSF">Capítulo 9: El Dominio de las Sombras</Contenido>                
+            <Capítulo páginas="20"></Capítulo>
+                <Contenido información="eqd">Capítulo 10: El Cementerio de los Libros Olvidados II</Contenido> 
         </Indice>
         <Año_publicación>2001</Año_publicación>
         <Editorial>Planeta</Editorial>      
     </Libro>
-
-    <Libro Id="L6214" tipo_clase="infantil" num_paginas="90">
-        <Título>El Principito</Título>
-        <Autor>Antoine de Saint-Exupéry</Autor>
-        <Sinopsis>Un aviador se encuentra perdido en el desierto del Sahara después de que su avión se estrella. Allí, conoce a un pequeño príncipe que viene de otro planeta. El príncipe relata sus aventuras a través de una serie de personajes que ha conocido en sus viajes, y juntos descubren el valor de la amistad, el amor y la vida misma.</Sinopsis>
-        <Indice>
-            
-        </Indice> 
-        <Año_publicación>1943</Año_publicación>
-        <Editorial>Argentina</Editorial>
-    </Libro>
-
 </Biblioteca>
