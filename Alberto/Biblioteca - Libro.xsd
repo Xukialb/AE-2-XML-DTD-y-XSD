@@ -35,7 +35,7 @@
                     </complexType>
                 </element>
                 <element name="Año_de_publicación" type="string" />
-                <element name="Editorial" type="string" minOccurs="1" maxOccurs="unbounded">
+                <element name="Editorial" type="string" minOccurs="1" maxOccurs="unbounded" />
             </sequence>
             <attribute name="Id" type="string" use="required"></attribute>
             <attribute name="tipo_clase" type="string" use="required"></attribute>
