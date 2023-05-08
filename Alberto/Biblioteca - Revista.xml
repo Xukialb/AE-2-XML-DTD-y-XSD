@@ -1,17 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Biblioteca [
+    <!ELEMENT Biblioteca (Revista*)>
+
+    <!ELEMENT Revista (Título,Número,Indice_de_contenido,Secciones)>
+    <!ATTLIST Revista Id ID #REQUIRED>
+    <!ATTLIST Revista tipo_clase (informática | corazón | coches | investigación | otras) #REQUIRED>
+    <!ATTLIST Revista num_paginas CDATA #REQUIRED>
+    <!ELEMENT Título (#PCDATA)>
+    <!ELEMENT Número (#PCDATA)>
+    <!ELEMENT Indice_de_contenido (#PCDATA)>
+    <!ELEMENT Secciones (Sección*)>
+    <!ELEMENT Sección (Contenido*)>
+    <!ATTLIST Sección num_paginas CDATA #REQUIRED>
+
+    <!ELEMENT Contenido (#PCDATA)> 
+    <!ATTLIST Contenido información CDATA #REQUIRED>
+]>
 <Biblioteca>
     <Revista Id="R0561" tipo_clase="coches" num_paginas="52">
-        <Titulo>CocheActual</Titulo>
-        <Numero>85</Numero>
+        <Título>CocheActual</Título>
+        <Número>85</Número>
         <Indice_de_contenido>
             -Sumario
             -Actualidad
             -Analisis a fondo
             -Anuncios
         </Indice_de_contenido>
-        <Seccion num_paginas="2">Actualidad</Seccion>
-            <Contenido informacion="https://www.cocheactual.com/reducir-las-emisiones-del-vehiculo-reduciendo-su-masa/">Reducir las emisiones del vehículo reduciendo su masa</Contenido>
-        <Seccion num_paginas="4">Anuncios</Seccion>
-            <Contenido informacion="https://www.cocheactual.com/reparacion-de-abolladuras-sin-pintar-o-tecnicas-pdr/">Reparación de abolladuras sin pintar o técnicas PDR</Contenido>
+        <Secciones>
+            <Sección num_paginas="2">
+                <Contenido información="https://www.cocheactual.com/los-precios-de-los-automoviles-siguen-mostrando-una-tendencia-al-alza/">Actualidad</Contenido>
+            </Sección>
+            <Sección num_paginas="2">
+                <Contenido información="https://www.cocheactual.com/trabajos-mas-y-menos-afectados-por-la-inteligencia-artificial/">Actualidad</Contenido>
+            </Sección>
+            <Sección num_paginas="2">
+                <Contenido información="https://www.cocheactual.com/reducir-las-emisiones-del-vehiculo-reduciendo-su-masa/">Actualidad</Contenido>
+            </Sección>
+            <Sección num_paginas="1">
+                <Contenido información="https://www.cocheactual.com/reparacion-de-abolladuras-sin-pintar-o-tecnicas-pdr/">Curiosidades</Contenido>
+            </Sección>
+            <Sección num_paginas="3">
+                <Contenido información="https://www.cocheactual.com/cuanto-cobra-un-mecanico-en-espana-que-perfiles-son-los-mas-buscados-en-automocion/">Curiosidades</Contenido>
+            </Sección>
+            <Sección num_paginas="2">
+                <Contenido información="https://www.cocheactual.com/como-la-electromecanica-del-automovil-ha-cambiado-el-sector-de-la-automocion/">Curiosidades</Contenido>
+            </Sección>
+            <Sección num_paginas="2">
+                <Contenido información="https://www.cocheactual.com/venta-de-vehiculos-en-espana-no-recuperara-niveles-hasta-2030/">Curiosidades</Contenido>
+            </Sección>
+            <Sección num_paginas="1">
+                <Contenido información="https://www.cocheactual.com/el-riesgo-de-la-conectividad-y-ciberseguridad-en-los-vehiculos-coches/">Curiosidades</Contenido>
+            </Sección>
+        </Secciones>
     </Revista>
 </Biblioteca>
