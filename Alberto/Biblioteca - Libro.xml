@@ -3,7 +3,7 @@
 <!DOCTYPE Biblioteca [
     <!ELEMENT Biblioteca (Libro*)>
 
-    <!ELEMENT Libro (Título,Autor,Sinopsis,Indice,Año_publicación,Editorial)>
+    <!ELEMENT Libro (Título,Autor?,Sinopsis,Indice,Año_publicación?,Editorial?)>
     <!ATTLIST Libro Id ID #REQUIRED>
     <!ATTLIST Libro tipo_clase (novela | infantil | didáctico) #REQUIRED>
     <!ATTLIST Libro num_paginas CDATA #REQUIRED>
@@ -13,15 +13,14 @@
     <!ELEMENT Sinopsis (#PCDATA)>
     <!ELEMENT Indice (Capítulo*)>
 
+    <!ELEMENT Capítulo (Contenido*)>
+    <!ATTLIST Capítulo páginas CDATA #REQUIRED>    
+    
+    <!ELEMENT Contenido (#PCDATA)>
+    <!ATTLIST Contenido información CDATA #REQUIRED>
+
     <!ELEMENT Año_publicación (#PCDATA)>
     <!ELEMENT Editorial (#PCDATA)>
-
-    <!ELEMENT Capítulo (contenido*)>
-
-    <!ATTLIST Capítulo num_paginas CDATA #REQUIRED>
-    <!ELEMENT contenido (#PCDATA)>
-    <!ATTLIST contenido información CDATA #REQUIRED>  
-
     
 ]>
 
@@ -32,28 +31,8 @@
         <Autor>Carlos Ruiz Zafon</Autor>
         <Sinopsis>Barcelona, 1945: Un muchacho, Daniel Sempere, es llevado por su padre a un misterioso lugar en el corazón del casco antiguo: El Cementerio de los Libros Olvidados. Allí, Daniel encuentra un libro llamado La Sombra del Viento, por Julián Carax, que cambiará su vida para siempre. A medida que Daniel investiga la vida y obra de Carax, se ve arrastrado a un peligroso laberinto de secretos y intrigas que lo llevan al corazón de la Barcelona de la posguerra.</Sinopsis>            
         <Indice>
-            <Capítulo num_paginas="10">Prólogo: La Sombra del Viento</Capítulo>
-                <contenido información="urlcap00">El contenido del prólogo.</contenido>    
-            <Capítulo num_paginas="25">Capítulo 1: La Ciudad de los Prodigios</Capítulo>
-                <contenido información="urlcap01">El contenido del primer capítulo.</contenido>
-            <Capítulo num_paginas="32">Capítulo 2: La Penumbra de los Sentidos</Capítulo>
-                <contenido información="urlcap02">El contenido del segundo capítulo.</contenido>
-            <Capítulo num_paginas="18">Capítulo 3: El Cementerio de los Libros Olvidados</Capítulo>
-                <contenido información="urlcap03">El contenido del tercer capítulo.</contenido>
-            <Capítulo num_paginas="22">Capítulo 4: La Ciudad de las Damas</Capítulo>
-                <contenido información="urlcap04">El contenido del cuarto capítulo.</contenido>
-            <Capítulo num_paginas="14">Capítulo 5: La Dama del Anís</Capítulo>
-                <contenido información="urlcap05">El contenido del quinto capítulo.</contenido>
-            <Capítulo num_paginas="19">Capítulo 6: El Palacio de la Medianoche</Capítulo>
-                <contenido información="urlcap06">El contenido del sexto capítulo.</contenido>
-            <Capítulo num_paginas="28">Capítulo 7: La Mujer de Vapor</Capítulo>
-                <contenido información="urlcap07">El contenido del septimo capítulo.</contenido>
-            <Capítulo num_paginas="27">Capítulo 8: El Prisionero del Cielo</Capítulo>
-                <contenido información="urlcap08">El contenido del octavo capítulo.</contenido>
-            <Capítulo num_paginas="16">Capítulo 9: El Dominio de las Sombras</Capítulo>
-                <contenido información="urlcap09">El contenido del noveno capítulo.</contenido>
-            <Capítulo num_paginas="20">Capítulo 10: El Cementerio de los Libros Olvidados II</Capítulo>
-                <contenido información="urlcap10">El contenido del decimo capítulo.</contenido>
+            <Capítulo páginas="4"></Capítulo>
+                 
         </Indice>
         <Año_publicación>2001</Año_publicación>
         <Editorial>Planeta</Editorial>      
@@ -64,20 +43,7 @@
         <Autor>Antoine de Saint-Exupéry</Autor>
         <Sinopsis>Un aviador se encuentra perdido en el desierto del Sahara después de que su avión se estrella. Allí, conoce a un pequeño príncipe que viene de otro planeta. El príncipe relata sus aventuras a través de una serie de personajes que ha conocido en sus viajes, y juntos descubren el valor de la amistad, el amor y la vida misma.</Sinopsis>
         <Indice>
-            <Capítulo num_paginas="6">Capítulo 1: El Aviador</Capítulo>
-                <contenido información="hrefcap01">El contenido del primer capítulo.</contenido> 
-            <Capítulo num_paginas="10">Capítulo 2: El Pequeño Príncipe</Capítulo>
-                <contenido información="hrefcap02">El contenido del segundo capítulo.</contenido>    
-            <Capítulo num_paginas="10">Capítulo 3: El Asteroide B 612</Capítulo>
-                <contenido información="hrefcap03">El contenido del tercer capítulo.</contenido>
-            <Capítulo num_paginas="15">Capítulo 4: El Viaje del Pequeño Príncipe</Capítulo>
-                <contenido información="hrefcap04">El contenido del cuarto capítulo.</contenido>
-            <Capítulo num_paginas="10">Capítulo 5: Los Personajes del Pequeño Príncipe</Capítulo>
-                <contenido información="hrefcap05">El contenido del quinto capítulo.</contenido>
-            <Capítulo num_paginas="10">Capítulo 6: El Zorro</Capítulo>
-                <contenido información="hrefcap06">El contenido del sexto capítulo.</contenido>
-            <Capítulo num_paginas="6">Capítulo 7: El Regreso a Casa</Capítulo>
-                <contenido información="hrefcap07">El contenido del séptimo capítulo.</contenido>
+            
         </Indice> 
         <Año_publicación>1943</Año_publicación>
         <Editorial>Argentina</Editorial>
