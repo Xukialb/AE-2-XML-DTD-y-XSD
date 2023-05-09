@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Biblioteca [
+    <!ELEMENT Biblioteca (Periódico*)>
+
+    <!ELEMENT Periódico (Secciones,Indice)>
+    <!ATTLIST Periódico Id ID #REQUIRED>
+    <!ATTLIST Periódico tipo_clase (nacional | internacional) #REQUIRED>
+    <!ATTLIST Periódico fecha_publicación CDATA #REQUIRED>
+    <!ELEMENT Secciones (Sección+)>
+
+    <!ELEMENT Sección (Artículo+)>
+    <!ATTLIST Sección tipo_sección (Económica | Opinión | Deportes | Nacional | Internacional) #REQUIRED>
+
+    <!ELEMENT Artículo (Contenido+)>
+    <!ATTLIST Artículo Autor CDATA #REQUIRED>
+
+    <!ELEMENT Contenido (#PCDATA)>
+    <!ATTLIST Contenido Información CDATA #REQUIRED>
+    
+    <!ELEMENT Indice (#PCDATA)> 
+]>
+<Biblioteca>
+    <Periódico Id="P0519" tipo_clase="nacional" fecha_publicación="2023/02/23">
+        <Secciones>
+            <Sección tipo_sección="Económica">
+                <Artículo Autor="Matias Prats">
+                    <Contenido Información="fdafad">Se baja el IVA de los productos básicos</Contenido>
+                </Artículo>
+            </Sección>
+            <Sección tipo_sección="Nacional">
+                <Artículo Autor="Pedro Piqueras">
+                    <Contenido Información="djfak">Comienza la precampaña electoral</Contenido>
+                </Artículo>
+            </Sección>
+            <Sección tipo_sección="Internacional">
+                <Artículo Autor="Matias Prats">
+                    <Contenido Información="dfaf">Se firma la paz en Ucrania</Contenido>
+                </Artículo>
+            </Sección>
+            <Sección tipo_sección="Nacional">
+                <Artículo Autor="José Ribagorda">
+                    <Contenido Información="gehr">Huelga de médicos en Madrid</Contenido>
+                </Artículo>
+            </Sección>
+            <Sección tipo_sección="Nacional">
+                <Artículo Autor="Isabel Jiménez">
+                    <Contenido Información="grwe">Comienza la fiesta del cine</Contenido>
+                </Artículo>
+            </Sección>   
+            <Sección tipo_sección="Deportes">
+                <Artículo Autor="Matias Prats Jr.">
+                    <Contenido Información="iuyl">Real Madrid se prepara para las semifinales de la Liga de Campeones</Contenido>
+                </Artículo>
+            </Sección>
+            <Sección tipo_sección="Nacional">
+                <Artículo Autor="Roberto Brasero">
+                    <Contenido Información="htre">Nueva ola de calor llega a la península</Contenido>
+                </Artículo>
+            </Sección>     
+        </Secciones>    
+        <Indice>
+            -Actualidad
+            -Nacional
+            -Internacional
+            -Local
+            -Cultura
+            -Deportes
+            -El tiempo
+            -Anuncios
+        </Indice>        
+    </Periódico>
+</Biblioteca>

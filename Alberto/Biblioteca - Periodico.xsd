@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!-- Hemos eliminado el nombre del esquema (xs), por lo que ya no hace falta
+    poner "xs" delante de cada etiqueta -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+    <annotation>
+        <documentation>
+            Esquema que marca la estructura de un periodico de la Biblioteca"
+         </documentation>
+    </annotation>
+    <!-- El nodo raíz se llama Biblioteca-->
+    <element name="Biblioteca">
+        <complexType>
+            <sequence>
+                <element name="Periódico">
+                    <complexType>
+                        <sequence>
+                            <element name="Secciones">
+                                <complexType>
+                                    <sequence>
+                                        <element name="Sección">
+                                            <complexType>
+                                                <sequence>
+                                                    <element name="Artículo">
+                                                        <complexType>
+                                                            <sequence>
+                                                                <element name="Contenido">
+                                                                    <complexType>
+                                                                        <simpleContent>
+                                                                            <extension base="string">
+                                                                                <attribute name="Información" type="string" use="required"></attribute>
+                                                                            </extension>
+                                                                        </simpleContent>
+                                                                    </complexType>
+                                                                </element>
+                                                            </sequence>
+                                                            <attribute name="Autor" type="string" use="required"></attribute>
+                                                        </complexType>
+                                                    </element>
+                                                </sequence>
+                                                <attribute name="tipo_sección" type="string" use="required"></attribute>
+                                            </complexType>
+                                        </element>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="Indice" type="string" />
+                        </sequence>
+                            <attribute name="Id" type="string" use="required"></attribute>
+                            <attribute name="tipo_clase" type="string" use="required"></attribute>
+                            <attribute name="fecha_publicación" type="date" use="required"></attribute> 
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>        
+    </element>              
+</schema>                  
