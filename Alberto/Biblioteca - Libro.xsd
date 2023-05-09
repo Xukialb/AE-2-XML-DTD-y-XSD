@@ -20,21 +20,23 @@
                             <element name="Indice">
                                 <complexType>
                                     <sequence>
-                                        <element name="Capítulo" type="string">
-                                            <complexType>
-                                                <attribute name="páginas" type="integer" use="required"></attribute>
-                                            </complexType>
-                                        </element>
+                                        <element name="Capítulo">
                                             <complexType>
                                                 <sequence>
-                                                    <element name="Contenido" type="string">
+                                                    <element name="Contenido">
                                                         <complexType>
-                                                            <attribute name="información" type="string" use="required"></attribute>
+                                                            <simpleContent>
+                                                                <extension base="string">
+                                                                    <attribute name="información" type="string" use="required"></attribute>
+                                                                </extension>
+                                                            </simpleContent>
                                                         </complexType>
                                                     </element>
                                                 </sequence>
-                                            </complexType>    
+                                            </complexType>
+                                        </element>
                                     </sequence>
+                                        <attribute name="páginas" type="integer" use="required"></attribute>
                                 </complexType>
                             </element>
                             <element name="Año_de_publicación" type="string" />

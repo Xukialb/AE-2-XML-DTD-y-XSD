@@ -11,7 +11,7 @@
     <element name="Biblioteca">
         <complexType>
             <sequence>
-                <element name="Revista" type="string">
+                <element name="Revista">
                     <complexType>
                         <sequence>
                             <element name="Titulo" type="string" />
@@ -20,12 +20,16 @@
                             <element name="Secciones"> 
                                 <complexType>
                                     <sequence>
-                                        <element name="Sección" type="string">
+                                        <element name="Sección">
                                             <complexType>
                                                 <sequence>
-                                                    <element name="Contenido" type="string">
+                                                    <element name="Contenido">
                                                         <complexType>
-                                                            <attribute name="información" type="string" use="required"></attribute>
+                                                            <simpleContent>
+                                                                <extension base="string">
+                                                                    <attribute name="información" type="string" use="required"></attribute>
+                                                                </extension>
+                                                            </simpleContent>
                                                         </complexType>
                                                     </element>   
                                                 </sequence>
