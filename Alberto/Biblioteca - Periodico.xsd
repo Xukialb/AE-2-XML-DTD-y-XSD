@@ -45,9 +45,21 @@
                             </element>
                             <element name="Indice" type="string" />
                         </sequence>
-                            <attribute name="Id" type="string" use="required"></attribute>
+                            <attribute name="Id" use="required">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <pattern value="[P][0-9]{4}"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </attribute>
                             <attribute name="tipo_clase" type="string" use="required"></attribute>
-                            <attribute name="fecha_publicación" type="date" use="required"></attribute> 
+                            <attribute name="fecha_publicación" use="required">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <length value="10"></length>
+                                    </restriction>
+                                </simpleType>
+                            </attribute> 
                     </complexType>
                 </element>
             </sequence>

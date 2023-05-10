@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Biblioteca SYSTEM "Biblioteca.dtd">
+<Biblioteca>
+    <Libro Id="L7514" tipo_clase="novela" num_paginas="522">
+        <Título>La sombra del viento</Título>
+        <Autor>Carlos Ruiz Zafon</Autor>
+        <Sinopsis>Barcelona, 1945: Un muchacho, Daniel Sempere, es llevado por su padre a un misterioso lugar en el corazón del casco antiguo: El Cementerio de los Libros Olvidados. Allí, Daniel encuentra un libro llamado La Sombra del Viento, por Julián Carax, que cambiará su vida para siempre. A medida que Daniel investiga la vida y obra de Carax, se ve arrastrado a un peligroso laberinto de secretos y intrigas que lo llevan al corazón de la Barcelona de la posguerra.</Sinopsis>            
+        <Indice>
+            <Capítulo páginas="10">
+                <Contenido información="gag">Prólogo: La Sombra del Viento</Contenido>
+            </Capítulo>                       
+            <Capítulo páginas="25">
+                <Contenido información="fda">Capítulo 1: La Ciudad de los Prodigios</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="32">
+                <Contenido información="rwqt">Capítulo 2: La Penumbra de los Sentidos</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="18">
+                <Contenido información="nrt">Capítulo 3: El Cementerio de los Libros Olvidados</Contenido> 
+            </Capítulo>                   
+            <Capítulo páginas="22">
+                <Contenido información="ewq">Capítulo 4: La Ciudad de las Damas</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="14">
+                <Contenido información="kiy">Capítulo 5: La Dama del Anís</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="19">
+                <Contenido información="gfs">Capítulo 6: El Palacio de la Medianoche</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="28">
+                <Contenido información="fwe">Capítulo 7: La Mujer de Vapor</Contenido>
+            </Capítulo>                    
+            <Capítulo páginas="27">
+                <Contenido información="iuyl">Capítulo 8: El Prisionero del Cielo</Contenido>                
+            </Capítulo>
+            <Capítulo páginas="16">
+                <Contenido información="sDSF">Capítulo 9: El Dominio de las Sombras</Contenido>                
+            </Capítulo>
+            <Capítulo páginas="20">
+                <Contenido información="eqd">Capítulo 10: El Cementerio de los Libros Olvidados II</Contenido> 
+            </Capítulo>
+        </Indice>
+        <Año_publicación>2001</Año_publicación>
+        <Editorial>Planeta</Editorial>      
+    </Libro> 
+
+    <Periódico Id="P0519" tipo_clase="nacional" fecha_publicación="2023/02/23">
+        <Secciones>
+            <Sección tipo_sección="Económica">
+                <Artículo Autor="Matias Prats">
+                    <Contenido Información="fdafad">Se baja el IVA de los productos básicos</Contenido>
+                </Artículo>
+            </Sección>
+            <Sección tipo_sección="Nacional">
+                <Artículo Autor="Pedro Piqueras">
+                    <Contenido Información="djfak">Comienza la precampaña electoral</Contenido>
+                </Artículo>
+            </Sección>
+            <Sección tipo_sección="Internacional">
+                <Artículo Autor="Matias Prats">
+                    <Contenido Información="dfaf">Se firma la paz en Ucrania</Contenido>
+                </Artículo>
+            </Sección>
+            <Sección tipo_sección="Nacional">
+                <Artículo Autor="José Ribagorda">
+                    <Contenido Información="gehr">Huelga de médicos en Madrid</Contenido>
+                </Artículo>
+            </Sección>
+            <Sección tipo_sección="Nacional">
+                <Artículo Autor="Isabel Jiménez">
+                    <Contenido Información="grwe">Comienza la fiesta del cine</Contenido>
+                </Artículo>
+            </Sección>   
+            <Sección tipo_sección="Deportes">
+                <Artículo Autor="Matias Prats Jr.">
+                    <Contenido Información="iuyl">Real Madrid se prepara para las semifinales de la Liga de Campeones</Contenido>
+                </Artículo>
+            </Sección>
+            <Sección tipo_sección="Nacional">
+                <Artículo Autor="Roberto Brasero">
+                    <Contenido Información="htre">Nueva ola de calor llega a la península</Contenido>
+                </Artículo>
+            </Sección>     
+        </Secciones>    
+        <Indice >
+            -Actualidad
+            -Nacional
+            -Internacional
+            -Local
+            -Cultura
+            -Deportes
+            -El tiempo
+            -Anuncios
+        </Indice>        
+    </Periódico>
+
+    <Revista Id="R0641" tipo_clase="coches" num_paginas="52">
+        <Título>CocheActual</Título>
+        <Número>52</Número>
+        <Indice_de_contenido>
+            -Sumario
+            -Actualidad
+            -Analisis a fondo
+            -Anuncios
+        </Indice_de_contenido>
+        <Secciones>
+            <Sección num_paginas="2">
+                <Contenido información="https://www.cocheactual.com/los-precios-de-los-automoviles-siguen-mostrando-una-tendencia-al-alza/">Actualidad</Contenido>
+            </Sección>
+            <Sección num_paginas="2">
+                <Contenido información="https://www.cocheactual.com/trabajos-mas-y-menos-afectados-por-la-inteligencia-artificial/">Actualidad</Contenido>
+            </Sección>
+            <Sección num_paginas="2">
+                <Contenido información="https://www.cocheactual.com/reducir-las-emisiones-del-vehiculo-reduciendo-su-masa/">Actualidad</Contenido>
+            </Sección>
+            <Sección num_paginas="1">
+                <Contenido información="https://www.cocheactual.com/reparacion-de-abolladuras-sin-pintar-o-tecnicas-pdr/">Curiosidades</Contenido>
+            </Sección>
+            <Sección num_paginas="3">
+                <Contenido información="https://www.cocheactual.com/cuanto-cobra-un-mecanico-en-espana-que-perfiles-son-los-mas-buscados-en-automocion/">Curiosidades</Contenido>
+            </Sección>
+            <Sección num_paginas="2">
+                <Contenido información="https://www.cocheactual.com/como-la-electromecanica-del-automovil-ha-cambiado-el-sector-de-la-automocion/">Curiosidades</Contenido>
+            </Sección>
+            <Sección num_paginas="2">
+                <Contenido información="https://www.cocheactual.com/venta-de-vehiculos-en-espana-no-recuperara-niveles-hasta-2030/">Curiosidades</Contenido>
+            </Sección>
+            <Sección num_paginas="1">
+                <Contenido información="https://www.cocheactual.com/el-riesgo-de-la-conectividad-y-ciberseguridad-en-los-vehiculos-coches/">Curiosidades</Contenido>
+            </Sección>
+        </Secciones>
+    </Revista>
+
+</Biblioteca>

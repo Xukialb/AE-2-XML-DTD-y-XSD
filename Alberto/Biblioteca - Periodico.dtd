@@ -1,0 +1,18 @@
+    <!ELEMENT Biblioteca (Periódico*)>
+
+    <!ELEMENT Periódico (Secciones,Indice)>
+    <!ATTLIST Periódico Id ID #REQUIRED>
+    <!ATTLIST Periódico tipo_clase (nacional | internacional) #REQUIRED>
+    <!ATTLIST Periódico fecha_publicación CDATA #IMPLIED>
+    <!ELEMENT Secciones (Sección+)>
+
+    <!ELEMENT Sección (Artículo+)>
+    <!ATTLIST Sección tipo_sección (Económica | Opinión | Deportes | Nacional | Internacional) #REQUIRED>
+
+    <!ELEMENT Artículo (Contenido+)>
+    <!ATTLIST Artículo Autor CDATA #REQUIRED>
+
+    <!ELEMENT Contenido (#PCDATA)>
+    <!ATTLIST Contenido Información CDATA #REQUIRED>
+    
+    <!ELEMENT Indice (#PCDATA)> 

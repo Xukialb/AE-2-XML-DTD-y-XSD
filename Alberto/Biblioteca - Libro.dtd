@@ -1,0 +1,19 @@
+    <!ELEMENT Biblioteca (Libro*)>
+
+    <!ELEMENT Libro (Título,Autor?,Sinopsis,Indice,Año_publicación?,Editorial?)>
+    <!ATTLIST Libro Id ID #REQUIRED>
+    <!ATTLIST Libro tipo_clase (novela | infantil | didáctico) #REQUIRED>
+    <!ATTLIST Libro num_paginas CDATA #REQUIRED>
+    <!ELEMENT Título (#PCDATA)>
+    <!ELEMENT Autor (#PCDATA)>
+    <!ELEMENT Sinopsis (#PCDATA)>
+    <!ELEMENT Indice (Capítulo*)>
+
+    <!ELEMENT Capítulo (Contenido*)>
+    <!ATTLIST Capítulo páginas CDATA #REQUIRED> 
+
+    <!ELEMENT Contenido (#PCDATA)>
+    <!ATTLIST Contenido información CDATA #REQUIRED>
+
+    <!ELEMENT Año_publicación (#PCDATA)>
+    <!ELEMENT Editorial (#PCDATA)>

@@ -1,21 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Biblioteca [
-    <!ELEMENT Biblioteca (Revista*)>
-
-    <!ELEMENT Revista (Título,Número,Indice_de_contenido,Secciones)>
-    <!ATTLIST Revista Id ID #REQUIRED>
-    <!ATTLIST Revista tipo_clase (informática | corazón | coches | investigación | otras) #REQUIRED>
-    <!ATTLIST Revista num_paginas CDATA #REQUIRED>
-    <!ELEMENT Título (#PCDATA)>
-    <!ELEMENT Número (#PCDATA)>
-    <!ELEMENT Indice_de_contenido (#PCDATA)>
-    <!ELEMENT Secciones (Sección*)>
-    <!ELEMENT Sección (Contenido*)>
-    <!ATTLIST Sección num_paginas CDATA #REQUIRED>
-
-    <!ELEMENT Contenido (#PCDATA)> 
-    <!ATTLIST Contenido información CDATA #REQUIRED>
-]>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Biblioteca SYSTEM "Biblioteca%20-%20Revista.dtd">
 <Biblioteca>
     <Revista Id="R0641" tipo_clase="coches" num_paginas="52">
         <Título>CocheActual</Título>

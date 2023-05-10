@@ -36,15 +36,39 @@
                                             </complexType>
                                         </element>
                                     </sequence>
-                                        <attribute name="páginas" type="integer" use="required"></attribute>
+                                        <attribute name="páginas" type="integer" use="required">
+                                            <simpleType>
+                                                <restriction base="integer">
+                                                    <pattern value="[0-9]"></pattern>
+                                                </restriction>
+                                            </simpleType>
+                                        </attribute>
                                 </complexType>
                             </element>
-                            <element name="Año_de_publicación" type="string" />
+                            <element name="Año_de_publicación" >
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <totalDigits value="4"></totalDigits>
+                                    </restriction>
+                                </simpleType>
+                            </element>    
                             <element name="Editorial" type="string" minOccurs="1" maxOccurs="unbounded" />
                         </sequence>
-                            <attribute name="Id" type="string" use="required"></attribute>
+                            <attribute name="Id" use="required">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <pattern value="[L][0-9]{4}"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </attribute>
                             <attribute name="tipo_clase" type="string" use="required"></attribute>
-                            <attribute name="num_paginas" type="integer" use="required"></attribute>
+                            <attribute name="num_paginas" use="required">
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <pattern value="[0-9]"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </attribute>
                     </complexType>
                 </element>    
             </sequence> 
