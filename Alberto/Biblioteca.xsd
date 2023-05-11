@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<!-- Hemos eliminado el nombre del esquema (xs), por lo que ya no hace falta
+    poner "xs" delante de cada etiqueta -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+    <annotation>
+        <documentation>
+            Esquema que marca la estructura de un libro de la Biblioteca"
+         </documentation>
+    </annotation>
+    <!-- El nodo raíz se llama Biblioteca-->
+    <element name="Biblioteca">
+        <complexType>
+            <sequence>
+                <element name="Libro">
+                    <complexType>
+                        <sequence>
+                            <element name="Titulo" type="string" />
+                            <element name="Autor" type="string" minOccurs="1" maxOccurs="unbounded" />
+                            <element name="Sinopsis" type="string" />
+                            <element name="Indice">
+                                <complexType>
+                                    <sequence>
+                                        <element name="Capítulo">
+                                            <complexType>
+                                                <sequence>
+                                                    <element name="Contenido">
+                                                        <complexType>
+                                                            <simpleContent>
+                                                                <extension base="string">
+                                                                    <attribute name="información" type="string" use="required"></attribute>
+                                                                </extension>
+                                                            </simpleContent>
+                                                        </complexType>
+                                                    </element>
+                                                </sequence>
+                                            </complexType>
+                                        </element>
+                                    </sequence>
+                                        <attribute name="páginas" use="required">
+                                            <simpleType>
+                                                <restriction base="integer">
+                                                    <pattern value="[0-9]"></pattern>
+                                                </restriction>
+                                            </simpleType>
+                                        </attribute>
+                                </complexType>
+                            </element>
+                            <element name="Año_de_publicación" >
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <totalDigits value="4"></totalDigits>
+                                    </restriction>
+                                </simpleType>
+                            </element>    
+                            <element name="Editorial" type="string" minOccurs="1" maxOccurs="unbounded" />
+                        </sequence>
+                            <attribute name="Id" use="required">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <pattern value="[L][0-9]{4}"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </attribute>
+                            <attribute name="tipo_clase" type="string" use="required"></attribute>
+                            <attribute name="num_paginas" use="required">
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <pattern value="[0-9]"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </attribute>
+                    </complexType>
+                </element>
+                <element name="Periódico">
+                    <complexType>
+                        <sequence>
+                            <element name="Secciones">
+                                <complexType>
+                                    <sequence>
+                                        <element name="Sección">
+                                            <complexType>
+                                                <sequence>
+                                                    <element name="Artículo">
+                                                        <complexType>
+                                                            <sequence>
+                                                                <element name="Contenido">
+                                                                    <complexType>
+                                                                        <simpleContent>
+                                                                            <extension base="string">
+                                                                                <attribute name="Información" type="string" use="required"></attribute>
+                                                                            </extension>
+                                                                        </simpleContent>
+                                                                    </complexType>
+                                                                </element>
+                                                            </sequence>
+                                                            <attribute name="Autor" type="string" use="required"></attribute>
+                                                        </complexType>
+                                                    </element>
+                                                </sequence>
+                                                <attribute name="tipo_sección" type="string" use="required"></attribute>
+                                            </complexType>
+                                        </element>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="Indice" type="string" />
+                        </sequence>
+                            <attribute name="Id" use="required">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <pattern value="[P][0-9]{4}"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </attribute>
+                            <attribute name="tipo_clase" type="string" use="required"></attribute>
+                            <attribute name="fecha_publicación" use="required">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <length value="10"></length>
+                                    </restriction>
+                                </simpleType>
+                            </attribute> 
+                    </complexType>
+                </element>
+                <element name="Revista">
+                    <complexType>
+                        <sequence>
+                            <element name="Titulo" type="string" />                            
+                            <element name="Número">
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <pattern value="[0-9]"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="Indice_de_contenido" type="string" />
+                            <element name="Secciones"> 
+                                <complexType>
+                                    <sequence>
+                                        <element name="Sección">
+                                            <complexType>
+                                                <sequence>
+                                                    <element name="Contenido">
+                                                        <complexType>
+                                                            <simpleContent>
+                                                                <extension base="string">
+                                                                    <attribute name="información" type="string" use="required"></attribute>
+                                                                </extension>
+                                                            </simpleContent>
+                                                        </complexType>
+                                                    </element>   
+                                                </sequence>
+                                                    <attribute name="num_paginas" use="required">
+                                                        <simpleType>
+                                                            <restriction base="integer">
+                                                                <pattern value="[0-9]"></pattern>
+                                                            </restriction>
+                                                        </simpleType>
+                                                    </attribute>
+                                            </complexType>
+                                        </element>            
+                                    </sequence>
+                                </complexType>
+                            </element> 
+                        </sequence> 
+                                <attribute name="Id" use="required">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <pattern value="[R][0-9]{4}"></pattern>
+                                    </restriction>
+                                </simpleType>
+                            </attribute>
+                            <attribute name="tipo_clase" type="string" use="required"></attribute>
+                            <attribute name="num_paginas" type="integer" use="required"></attribute>  
+                    </complexType> 
+                </element> 
+            </sequence> 
+        </complexType>
+    </element>                
+</schema>
