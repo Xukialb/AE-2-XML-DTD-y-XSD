@@ -36,7 +36,7 @@
                                             </complexType>
                                         </element>
                                     </sequence>
-                                        <attribute name="páginas" type="integer" use="required">
+                                        <attribute name="páginas" use="required">
                                             <simpleType>
                                                 <restriction base="integer">
                                                     <pattern value="[0-9]"></pattern>
