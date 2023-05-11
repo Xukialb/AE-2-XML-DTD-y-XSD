@@ -1,80 +1,132 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE biblioteca [
+<!ELEMENT biblioteca (libros, revistas, periodicos)>
+    <!ELEMENT libros (libro*)>
+    <!ELEMENT revistas (revista*)>
+    <!ELEMENT periodicos (periodico*)>
 
-<!DOCTYPE Anabella_biblioteca SYSTEM "Anabella_biblioteca.dtd">     
-    <biblioteca>
+    <!ELEMENT libro (titulo, sinopsis, indice, capitulo*)>
+    <!ATTLIST libro id CDATA #REQUIRED>
+    <!ATTLIST libro tipo_clase (novela | infantil | didáctico) #REQUIRED>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT sinopsis (#PCDATA)>
+    <!ELEMENT indice (item*)>
+    <!ELEMENT capitulo (contenido_cap*)>
+    <!ATTLIST capitulo id_capitulo CDATA #REQUIRED>
+    <!ATTLIST capitulo titulo_cap CDATA #REQUIRED>
+    <!ATTLIST capitulo paginas CDATA #REQUI
+    <!ELEMENT item (#PCDATA)>
+    <!ATTLIST item pagina CDATA #REQUIRED>
+
+    <!ELEMENT contenido (#PCDATA)>
+    <!ATTLIST contenido enlace CDATA #REQUIRED>
+
+
+    <!ELEMENT revista (titulo_rev, numero, indice_rev, seccion_r*, paginas)>
+    <!ATTLIST  revista id ID #REQUIRED>
+    <!ATTLIST revista tipo_clase CDATA #REQUIRED> 
+    <!ELEMENT titulo_rev (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
+    <!ELEMENT indice_rev (item*)>
+    <!ATTLIST item pagina CDATA #REQUIRED>
+    <!ELEMENT seccion_r (#PCDATA)>
+    <!ATTLIST seccion_r titulo CDATA #REQUIRED>
+    <!ATTLIST seccion_r paginas CDATA #REQUIRED>
+    <!ELEMENT contenido_rev (#PCDATA)>
+    <!ATTLIST contenido_rev enlace CDATA #REQUIRED>
+    <!ELEMENT paginas (#PCDATA)>
+
+    <!ELEMENT periodico (secciones, articulo*)>
+    <!ATTLIST periodico id ID #REQUIRED>
+    <!ATTLIST periodico tipo_clase (nacional | internacional) #REQUIRED>
+    <!ATTLIST periodico fecha_publicacion CDATA #REQUIRED>
+
+    <!ELEMENT secciones (seccion_per*)>
+    <!ELEMENT seccion_per (articulo, contenido_p)>
+    <!ATTLIST seccion_per tipo_seccion (economica | opinion | deportes | nacional | internacional) #REQUIRED>
+
+    <!ELEMENT articulo (#PCDATA)>
+    <!ATTLIST articulo autor CDATA #REQUIRED>
+    <!ELEMENT contenido_p (#PCDATA)>
+    <!ATTLIST contenido_p enlace CDATA #REQUIRED>
+   ]>
+
+
+<biblioteca>
     <libros>
-    <libro id="L123" tipo_clase="novela">
-        <titulo_libro>Nadie queda atrás</titulo_libro>
-        <sinopsis>La novela "Nadie queda atrás" presenta la historia de un grupo de personas que enfrentan 
-        desafíos y adversidades en su camino hacia la superación personal. Comenzando con el capítulo "Para 
-        comenzar", los personajes luchan por encontrar la motivación y la fuerza para comenzar un nuevo camino
-         en sus vidas. En "Silencio", se enfrentan a los obstáculos internos y externos que los detienen, 
-         mientras que en "Tiempo y esfuerzo" aprenden que el éxito requiere dedicación y paciencia. En "Seguir",
-        los personajes luchan por mantenerse en el camino correcto, mientras que en "Supremacía", enfrentan el 
-          desafío final para alcanzar sus metas. En resumen, "Nadie queda atrás" es una conmovedora novela sobre 
-          la lucha, la perseverancia y la superación personal, que inspirará a cualquier lector que se enfrente a
-          desafíos en su vida.</sinopsis>
-        <indice>
-            <item pagina="1">Para comenzar</item>
-            <item pagina="15">Silencio</item>
-            <item pagina="26">Tiempo y esfuerzo</item>
-            <item pagina="38">Seguir</item>
-            <item pagina="54">Supremacía</item>
-        </indice>         
-        <capitulo id_capitulo="L123C1" titulo_cap= "Para comenzar" paginas="14"> </capitulo>
-            <contenido_cap enlace=""></contenido_cap>           
-        <capitulo id_capitulo="L123C2" titulo_cap="Silencio" paginas="11"> </capitulo> 
-            <contenido_cap enlace="" ></contenido_cap>           
-        <capitulo id_capitulo="L123C3" titulo_cap="Tiempo y esfuerzo" paginas="12"></capitulo>
-                <contenido_cap enlace=""></contenido_cap>              
-        <capitulo id_capitulo="L123C4" titulo_cap= "Seguir" paginas="16"> </capitulo>
-                <contenido_cap enlace=""></contenido_cap>                
-        <capitulo id_capitulo="L123C5" titulo_cap= "Supremacía" paginas="12"></capitulo>  
-                <contenido_cap enlace=""></contenido_cap>            
-    </libro>
-</libros>
-<revistas>
-    <revista id="R001" tipo_clase="coches">
-        <titulo_rev>Lanzamientos 2023</titulo_rev>
-        <numero>1</numero>
-        <indice_rev> 
-            <item pagina="1">Lo nuevo para este año</item>
-            <item pagina="9">Estilo y confort</item>
-            <item pagina="13">Los más vendidos</item>
-        </indice_rev>
+        <libro id="L123" tipo_clase="novela">
+            <titulo>Nadie queda atrás</titulo>
+            <sinopsis>La novela "Nadie queda atrás" presenta la historia de un grupo de personas que enfrentan 
+            desafíos y adversidades en su camino hacia la superación personal. Comenzando con el capítulo "Para 
+            comenzar", los personajes luchan por encontrar la motivación y la fuerza para comenzar un nuevo camino
+             en sus vidas. En "Silencio", se enfrentan a los obstáculos internos y externos que los detienen, 
+            mientras que en "Tiempo y esfuerzo" aprenden que el éxito requiere dedicación y paciencia. En "Seguir",
+            los personajes luchan por mantenerse en el camino correcto, mientras que en "Supremacía", enfrentan el 
+            desafío final para alcanzar sus metas. En resumen, "Nadie queda atrás" es una conmovedora novela sobre 
+            la lucha, la perseverancia y la superación personal, que inspirará a cualquier lector que se enfrente a
+            desafíos en su vida.</sinopsis>
+             <indice>
+                <item pagina="1">Para comenzar</item>
+                <item pagina="15">Silencio</item>
+                <item pagina="26">Tiempo y esfuerzo</item>
+                <item pagina="38">Seguir</item>
+                <item pagina="54">Supremacía</item>
+            </indice>         
+            <capitulo id_capitulo="L123C1" titulo_cap= "Para comenzar" paginas="14"> </capitulo>
+                <contenido enlace=""></contenido>           
+            <capitulo id_capitulo="L123C2" titulo_cap="Silencio" paginas="11"> </capitulo> 
+                <contenido enlace="" ></contenido>           
+             <capitulo id_capitulo="L123C3" titulo_cap="Tiempo y esfuerzo" paginas="12"></capitulo>
+                <contenido enlace=""></contenido>              
+            <capitulo id_capitulo="L123C4" titulo_cap= "Seguir" paginas="16"> </capitulo>
+                <contenido enlace=""></contenido>                
+            <capitulo id_capitulo="L123C5" titulo_cap= "Supremacía" paginas="12"></capitulo>  
+                <contenido enlace=""></contenido>            
+        </libro>
+    </libros>
+    <revistas>
+        <revista id="R001" tipo_clase="coches">
+            <titulo>Lanzamientos 2023</titulo>
+            <numero>1</numero>
+            <indice_rev> 
+                <item pagina="1">Lo nuevo para este año</item>
+                <item pagina="9">Estilo y confort</item>
+                <item pagina="13">Los más vendidos</item>
+            </indice_rev>
             <seccion_r titulo="Lo nuevo para este año" paginas="8"> </seccion_r>
-                <contenido_rev enlace="url"></contenido_rev>      
+            <contenido_rev enlace="url"></contenido_rev>      
             <seccion_r titulo="Estilo y confort" paginas="5"> </seccion_r>
-                <contenido_rev enlace="url"></contenido_rev>  
+            <contenido_rev enlace="url"></contenido_rev>  
             <seccion_r titulo="Los más vendidos" paginas="10"></seccion_r>
-                <contenido_rev enlace="url"></contenido_rev>   
-        <paginas>23</paginas>
-    </revista>
-   </revistas>
-<periodicos>
-   <periodico id="P101" tipo_clase="nacional" fecha_publicacion="30/04/2023">
-   <secciones>
-        <seccion_per tipo_seccion="economica"> 
-            <articulo autor="Marta Rivas">Nuevos fondos de inversión</articulo>
-                <contenido enlace="url"></contenido>
-        </seccion_per>
-        <seccion_per tipo_seccion="opinion">
-            <articulo autor="Sol Harf">"Entre tazas de cafe"</articulo>
-                <contenido enlace="url"></contenido>
-        </seccion_per>
-        <seccion_per tipo_seccion="deportes">
-            <articulo autor="Marta Re">"El superclasico..."</articulo>
-                <contenido enlace="url"></contenido>
-        </seccion_per> 
-         <seccion_per tipo_seccion="internacional">
-            <articulo autor="Juan Cuevas">"Tensión en medio oriente"</articulo>
-                <contenido enlace="url"></contenido>
-        </seccion_per>           
-         <seccion_per tipo_seccion="nacional">
-            <articulo autor="Emilio Suris">"Bajas en los indices de desempleo"</articulo>
-                <contenido enlace="url"></contenido>
-        </seccion_per>                            
-   </secciones>
-   </periodico>
-</periodicos>
+            <contenido_rev enlace="url"></contenido_rev>   
+            <paginas>23</paginas>
+        </revista>
+    </revistas>
+    <periodicos>
+        <periodico id="P101" tipo_clase="nacional" fecha_publicacion="30/04/2023">
+            <secciones>
+                <seccion_per tipo_seccion="economica"> 
+                <articulo autor="Marta Rivas">Nuevos fondos de inversión</articulo>
+                <contenido_p enlace="url"></contenido_p>
+                </seccion_per>
+                <seccion_per tipo_seccion="opinion">
+                <articulo autor="Sol Harf">"Entre tazas de cafe"</articulo>
+                <contenido_p enlace="url"></contenido_p>
+                </seccion_per>
+                <seccion_per tipo_seccion="deportes">
+                    <articulo autor="Marta Re">"El superclasico..."</articulo>
+                    <contenido_p enlace="url"></contenido_p>
+                </seccion_per> 
+                <seccion_per tipo_seccion="internacional">
+                    <articulo autor="Juan Cuevas">"Tensión en medio oriente"</articulo>
+                    <contenido_p enlace="url"></contenido_p>
+                </seccion_per>           
+                <seccion_per tipo_seccion="nacional">
+                    <articulo autor="Emilio Suris">"Bajas en los indices de desempleo"</articulo>
+                    <contenido_p enlace="url"></contenido_p>
+                </seccion_per>                            
+            </secciones>
+        </periodico>
+    </periodicos>
 </biblioteca>
+ 

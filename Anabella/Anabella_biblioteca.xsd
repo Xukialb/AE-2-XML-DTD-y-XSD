@@ -5,14 +5,14 @@
         <complexType>
             <sequence>
                 <element name="libros">
-                <complexType>
+                    <complexType>
                         <element name="libro" minOccurs="1" maxOccurs="unbounded">
                             <complexType>
-                            <sequence>
-                                <element name="titulo_libro" type="xs:string"/>
-                                <element name="sinopsis" type="xs:string"/>
-                                <element name="indice" type="xs:string"/>
-                                    <complexType>
+                                <sequence>
+                                    <element name="titulo_libro" type="xs:string"/>
+                                    <element name="sinopsis" type="xs:string"/>
+                                    <element name="indice" type="xs:string"/>
+                                        <complexType>
                                         <atributte name="item" maxOccurs="unbounded" use="required"></atributte>
                                     </complexType>
                                 <element name="capitulo" type="xs:string"/>

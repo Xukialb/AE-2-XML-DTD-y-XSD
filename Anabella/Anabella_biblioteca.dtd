@@ -46,5 +46,4 @@
     <!ATTLIST articulo autor CDATA #REQUIRED>
     <!ELEMENT contenido (#PCDATA)>
     <!ATTLIST contenido enlace CDATA #REQUIRED>
-
-   ]>
+   
