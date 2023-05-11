@@ -1,1 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+
+<element name="biblioteca">
+        <complexType>
+            <sequence>
+                <element name="libros">
+                <complexType>
+                        <element name="libro" minOccurs="1" maxOccurs="unbounded">
+                            <complexType>
+                            <sequence>
+                                <element name="titulo_libro" type="xs:string"/>
+                                <element name="sinopsis" type="xs:string"/>
+                                <element name="indice" type="xs:string"/>
+                                    <complexType>
+                                        <atributte name="item" maxOccurs="unbounded" use="required"></atributte>
+                                    </complexType>
+                                <element name="capitulo" type="xs:string"/>
+                                <element name="contenido_cap" type="xs:string"/>
+                </element>
+            </sequence>
+        </complexType>
+
+                <element name="revistas" type="xs:string" />
+                    <complexType>
+                        <element name="revista" minOccurs="1" maxOccurs="unbounded">
+                <element name="periodicos" type="xs:string">
+                    <complexType>
+                        <element name="periodico" minOccurs="1" maxOccurs="unbounded">
+                            <sequence>
+                              <element name="seccion_per" type="xs:string" />  
+                              <element name="articulo" type="xs:string" />
+                              <element name="contenido" type="xs:string" />
+                            </element></sequence>
+                        </complexType>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</xs:schema>
