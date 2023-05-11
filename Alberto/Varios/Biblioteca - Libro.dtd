@@ -17,3 +17,4 @@
 
     <!ELEMENT Año_publicación (#PCDATA)>
     <!ELEMENT Editorial (#PCDATA)>
+    <!ENTITY Cap "Capítulo">

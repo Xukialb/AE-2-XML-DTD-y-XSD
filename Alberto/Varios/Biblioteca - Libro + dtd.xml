@@ -19,6 +19,7 @@
 
     <!ELEMENT Año_publicación (#PCDATA)>
     <!ELEMENT Editorial (#PCDATA)>
+    <!ENTITY Cap "Capítulo">
 ]>
 <Biblioteca>
     <Libro Id="L7514" tipo_clase="novela" num_paginas="522">
@@ -30,34 +31,34 @@
                 <Contenido información="gag">Prólogo: La Sombra del Viento</Contenido>
             </Capítulo>                       
             <Capítulo páginas="25">
-                <Contenido información="fda">Capítulo 1: La Ciudad de los Prodigios</Contenido>
+                <Contenido información="fda">&Cap; 1: La Ciudad de los Prodigios</Contenido>
             </Capítulo>                    
             <Capítulo páginas="32">
-                <Contenido información="rwqt">Capítulo 2: La Penumbra de los Sentidos</Contenido>
+                <Contenido información="rwqt">&Cap; 2: La Penumbra de los Sentidos</Contenido>
             </Capítulo>                    
             <Capítulo páginas="18">
-                <Contenido información="nrt">Capítulo 3: El Cementerio de los Libros Olvidados</Contenido> 
+                <Contenido información="nrt">&Cap; 3: El Cementerio de los Libros Olvidados</Contenido> 
             </Capítulo>                   
             <Capítulo páginas="22">
-                <Contenido información="ewq">Capítulo 4: La Ciudad de las Damas</Contenido>
+                <Contenido información="ewq">&Cap; 4: La Ciudad de las Damas</Contenido>
             </Capítulo>                    
             <Capítulo páginas="14">
-                <Contenido información="kiy">Capítulo 5: La Dama del Anís</Contenido>
+                <Contenido información="kiy">&Cap; 5: La Dama del Anís</Contenido>
             </Capítulo>                    
             <Capítulo páginas="19">
-                <Contenido información="gfs">Capítulo 6: El Palacio de la Medianoche</Contenido>
+                <Contenido información="gfs">&Cap; 6: El Palacio de la Medianoche</Contenido>
             </Capítulo>                    
             <Capítulo páginas="28">
-                <Contenido información="fwe">Capítulo 7: La Mujer de Vapor</Contenido>
+                <Contenido información="fwe">&Cap; 7: La Mujer de Vapor</Contenido>
             </Capítulo>                    
             <Capítulo páginas="27">
-                <Contenido información="iuyl">Capítulo 8: El Prisionero del Cielo</Contenido>                
+                <Contenido información="iuyl">&Cap; 8: El Prisionero del Cielo</Contenido>                
             </Capítulo>
             <Capítulo páginas="16">
-                <Contenido información="sDSF">Capítulo 9: El Dominio de las Sombras</Contenido>                
+                <Contenido información="sDSF">&Cap; 9: El Dominio de las Sombras</Contenido>                
             </Capítulo>
             <Capítulo páginas="20">
-                <Contenido información="eqd">Capítulo 10: El Cementerio de los Libros Olvidados II</Contenido> 
+                <Contenido información="eqd">&Cap; 10: El Cementerio de los Libros Olvidados II</Contenido> 
             </Capítulo>
         </Indice>
         <Año_publicación>2001</Año_publicación>

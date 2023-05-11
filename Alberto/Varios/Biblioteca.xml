@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE Biblioteca SYSTEM "Biblioteca.dtd">
 <Biblioteca>
     <Libro Id="L7514" tipo_clase="novela" num_paginas="522">
         <Título>La sombra del viento</Título>
