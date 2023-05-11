@@ -25,7 +25,9 @@
     <!ATTLIST revista tipo_clase CDATA #REQUIRED> 
     <!ELEMENT titulo_rev (#PCDATA)>
     <!ELEMENT numero (#PCDATA)>
-    <!ELEMENT indice_rev (#PCDATA)>
+    <!ELEMENT indice_rev (item*)>
+    <!ELEMENT item (#PCDATA)>
+    <!ATTLIST item pagina CDATA #REQUIRED>
     <!ELEMENT seccion_r (#PCDATA)>
     <!ATTLIST seccion_r titulo CDATA #REQUIRED>
     <!ATTLIST seccion_r paginas CDATA #REQUIRED>

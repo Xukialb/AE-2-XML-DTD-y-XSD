@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
-<!DOCTYPE biblioteca SYSTEM "Anabella_biblioteca.dtd">     
+<!DOCTYPE Anabella_biblioteca SYSTEM "Anabella_biblioteca.dtd">     
     <biblioteca>
     <libros>
     <libro id="L123" tipo_clase="novela">
@@ -10,7 +10,7 @@
         comenzar", los personajes luchan por encontrar la motivación y la fuerza para comenzar un nuevo camino
          en sus vidas. En "Silencio", se enfrentan a los obstáculos internos y externos que los detienen, 
          mientras que en "Tiempo y esfuerzo" aprenden que el éxito requiere dedicación y paciencia. En "Seguir",
-          los personajes luchan por mantenerse en el camino correcto, mientras que en "Supremacía", enfrentan el 
+        los personajes luchan por mantenerse en el camino correcto, mientras que en "Supremacía", enfrentan el 
           desafío final para alcanzar sus metas. En resumen, "Nadie queda atrás" es una conmovedora novela sobre 
           la lucha, la perseverancia y la superación personal, que inspirará a cualquier lector que se enfrente a
           desafíos en su vida.</sinopsis>
@@ -33,22 +33,24 @@
                 <contenido_cap enlace=""></contenido_cap>            
     </libro>
 </libros>
-
 <revistas>
     <revista id="R001" tipo_clase="coches">
         <titulo_rev>Lanzamientos 2023</titulo_rev>
         <numero>1</numero>
-        <indice_rev> </indice_rev>
+        <indice_rev> 
+            <item pagina="1">Lo nuevo para este año</item>
+            <item pagina="9">Estilo y confort</item>
+            <item pagina="13">Los más vendidos</item>
+        </indice_rev>
             <seccion_r titulo="Lo nuevo para este año" paginas="8"> </seccion_r>
                 <contenido_rev enlace="url"></contenido_rev>      
-            <seccion_r titulo="Estilo y sobriedad" paginas="5"> </seccion_r>
+            <seccion_r titulo="Estilo y confort" paginas="5"> </seccion_r>
                 <contenido_rev enlace="url"></contenido_rev>  
             <seccion_r titulo="Los más vendidos" paginas="10"></seccion_r>
                 <contenido_rev enlace="url"></contenido_rev>   
         <paginas>23</paginas>
     </revista>
    </revistas>
-
 <periodicos>
    <periodico id="P101" tipo_clase="nacional" fecha_publicacion="30/04/2023">
    <secciones>
@@ -69,7 +71,7 @@
                 <contenido enlace="url"></contenido>
         </seccion_per>           
          <seccion_per tipo_seccion="nacional">
-            <articulo autor="Emilio Suris">"Bajas en las taasa de desempleo"</articulo>
+            <articulo autor="Emilio Suris">"Bajas en los indices de desempleo"</articulo>
                 <contenido enlace="url"></contenido>
         </seccion_per>                            
    </secciones>
