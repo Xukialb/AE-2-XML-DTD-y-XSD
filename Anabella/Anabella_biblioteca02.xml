@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE bilbioteca SYSTEM "Anabella\Anabella_biblioteca.xsd">
+<!DOCTYPE bilbioteca SYSTEM "Anabella_biblioteca.xsd">
 <biblioteca>
     <libros>
         <libro id="L123" tipo_clase="novela">
