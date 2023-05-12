@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+
+<element name="revistas" type="xs:string" />
+                    <complexType>
+                        <element name="revista" minOccurs="1" maxOccurs="unbounded">
+                            <complexType>
+                                <sequence>
+                                    <element name="titulo_rev" type="string"/>
+                                    <element name="numero" type="integer"/>
+                                    <element name="indice_rev" type="string"/>
+                                    <element name="indice_rev" type="string"/>
+                                        <complexType>
+                                            <element name="item" type="string">
+                                                <complexType>
+                                                    <simpleContent>
+                                                        <simpleType>
+                                                            <restriction base="integer">
+                                                            <totalDigits value="4"></totalDigits>
+                                                                <atributte name="pagina" type="integer" use="required"></atributte>
+                                                            </restriction>
+                                                        </simpleType>   
+                                                    </simpleContent>          
+                                                </complexType>
+                                            </element>
+                                        </complexType>
+                                    <element name="secciones" type="string">
+                                        <complexType>
+                                            <element name="seccion_r" type="string" use="required">
+                                                <complexType>
+                                                    <sequence>
+                                                        <atributte name="titulo" type="string" use="required"></atributte>
+                                                        <atributte name="paginas" type="integer" use="required"></atributte>
+                                                    </sequence>
+                                                </complexType>                                            
+                                            <element name="contenido_rev" type="string" use="required"/>
+                                                <complexType>
+                                                    <atributte name="enlace" type="string" use="required"/>
+                                                </complexType>
+                                            <element name="paginas" type="integer" use="required"/>
+                                            </element>
+                                        </complexType>  
+                                    </element> 
+                                <atributte name="id" type="string" use="required"></atributte>  
+                                <atributte name="tipo_clase" type="string" use="required"></atributte>                            
+                                </sequence>
+                            </complexType>
+                        </element>
+                    </complexType>
+                </element>
+</schema>
