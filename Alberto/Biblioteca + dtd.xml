@@ -1,140 +1,140 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE Biblioteca [
-    <!ELEMENT Biblioteca (Libro*,Periódico*,Revista*)>
+    <!ELEMENT Biblioteca (Libro*,Periodico*,Revista*)>
 
-    <!ELEMENT Libro (Título_lib,Autor?,Sinopsis,Indice_lib,Año_publicación?,Editorial?)>
+    <!ELEMENT Libro (Titulo_lib,Autor?,Sinopsis,Indice_lib,Anio_publicacion?,Editorial?)>
     <!ATTLIST Libro Id ID #REQUIRED>
-    <!ATTLIST Libro tipo_clase (novela | infantil | didáctico) #REQUIRED>
+    <!ATTLIST Libro tipo_clase (novela | infantil | didactico) #REQUIRED>
     <!ATTLIST Libro num_paginas CDATA #REQUIRED>
-    <!ELEMENT Título_lib (#PCDATA)>
+    <!ELEMENT Titulo_lib (#PCDATA)>
     <!ELEMENT Autor (#PCDATA)>
     <!ELEMENT Sinopsis (#PCDATA)>
-    <!ELEMENT Indice_lib (Capítulo_lib*)>
+    <!ELEMENT Indice_lib (Capitulo_lib*)>
 
-    <!ELEMENT Capítulo_lib (Contenido_cap*)>
-    <!ATTLIST Capítulo_lib páginas CDATA #REQUIRED> 
+    <!ELEMENT Capitulo_lib (Contenido_cap*)>
+    <!ATTLIST Capitulo_lib paginas CDATA #REQUIRED> 
 
     <!ELEMENT Contenido_cap (#PCDATA)>
-    <!ATTLIST Contenido_cap información CDATA #REQUIRED>
+    <!ATTLIST Contenido_cap informacion CDATA #REQUIRED>
 
-    <!ELEMENT Año_publicación (#PCDATA)>
+    <!ELEMENT Anio_publicacion (#PCDATA)>
     <!ELEMENT Editorial (#PCDATA)>
-    <!ENTITY Cap "Capítulo">
+    <!ENTITY Cap "Capitulo">
 
 
-    <!ELEMENT Periódico (Secciones_per,Indice)>
-    <!ATTLIST Periódico Id ID #REQUIRED>
-    <!ATTLIST Periódico tipo_clase (nacional | internacional) #REQUIRED>
-    <!ATTLIST Periódico fecha_publicación CDATA #IMPLIED>
-    <!ELEMENT Secciones_per (Sección_per+)>
+    <!ELEMENT Periodico (Secciones_per,Indice)>
+    <!ATTLIST Periodico Id ID #REQUIRED>
+    <!ATTLIST Periodico tipo_clase (nacional | internacional) #REQUIRED>
+    <!ATTLIST Periodico fecha_publicacion CDATA #IMPLIED>
+    <!ELEMENT Secciones_per (Seccion_per+)>
 
-    <!ELEMENT Sección_per (Artículo+)>
-    <!ATTLIST Sección_per tipo_sección (Económica | Opinión | Deportes | Nacional | Internacional) #REQUIRED>
+    <!ELEMENT Seccion_per (Articulo+)>
+    <!ATTLIST Seccion_per tipo_seccion (Economica | Opinion | Deportes | Nacional | Internacional) #REQUIRED>
 
-    <!ELEMENT Artículo (Contenido_art+)>
-    <!ATTLIST Artículo Autor CDATA #REQUIRED>
+    <!ELEMENT Articulo (Contenido_art+)>
+    <!ATTLIST Articulo Autor CDATA #REQUIRED>
 
     <!ELEMENT Contenido_art (#PCDATA)>
-    <!ATTLIST Contenido_art Información CDATA #REQUIRED>
+    <!ATTLIST Contenido_art Informacion CDATA #REQUIRED>
     
     <!ELEMENT Indice (#PCDATA)> 
 
 
-    <!ELEMENT Revista (Título,Número,Indice_de_contenido,Secciones)>
+    <!ELEMENT Revista (Titulo,Numero,Indice_de_contenido,Secciones)>
     <!ATTLIST Revista Id ID #REQUIRED>
-    <!ATTLIST Revista tipo_clase (informática | corazón | coches | investigación | otras) #REQUIRED>
+    <!ATTLIST Revista tipo_clase (informatica | corazon | coches | investigacion | otras) #REQUIRED>
     <!ATTLIST Revista num_paginas CDATA #REQUIRED>
-    <!ELEMENT Título (#PCDATA)>
-    <!ELEMENT Número (#PCDATA)>
+    <!ELEMENT Titulo (#PCDATA)>
+    <!ELEMENT Numero (#PCDATA)>
     <!ELEMENT Indice_de_contenido (#PCDATA)>
-    <!ELEMENT Secciones (Sección*)>
-    <!ELEMENT Sección (Contenido*)>
-    <!ATTLIST Sección num_paginas CDATA #REQUIRED>
+    <!ELEMENT Secciones (Seccion*)>
+    <!ELEMENT Seccion (Contenido*)>
+    <!ATTLIST Seccion num_paginas CDATA #REQUIRED>
 
     <!ELEMENT Contenido (#PCDATA)> 
-    <!ATTLIST Contenido información CDATA #REQUIRED>
+    <!ATTLIST Contenido informacion CDATA #REQUIRED>
 ]>
 <Biblioteca>
     <Libro Id="L7514" tipo_clase="novela" num_paginas="522">
-        <Título_lib>La sombra del viento</Título_lib>
+        <Titulo_lib>La sombra del viento</Titulo_lib>
         <Autor>Carlos Ruiz Zafon</Autor>
         <Sinopsis>Barcelona, 1945: Un muchacho, Daniel Sempere, es llevado por su padre a un misterioso lugar en el corazón del casco antiguo: El Cementerio de los Libros Olvidados. Allí, Daniel encuentra un libro llamado La Sombra del Viento, por Julián Carax, que cambiará su vida para siempre. A medida que Daniel investiga la vida y obra de Carax, se ve arrastrado a un peligroso laberinto de secretos y intrigas que lo llevan al corazón de la Barcelona de la posguerra.</Sinopsis>            
         <Indice_lib>
-            <Capítulo_lib páginas="10">
-                <Contenido_cap información="gag">Prólogo: La Sombra del Viento</Contenido_cap>
-            </Capítulo_lib>                       
-            <Capítulo_lib páginas="25">
-                <Contenido_cap información="fda">&Cap; 1: La Ciudad de los Prodigios</Contenido_cap>
-            </Capítulo_lib>                    
-            <Capítulo_lib páginas="32">
-                <Contenido_cap información="rwqt">&Cap; 2: La Penumbra de los Sentidos</Contenido_cap>
-            </Capítulo_lib>                    
-            <Capítulo_lib páginas="18">
-                <Contenido_cap información="nrt">&Cap; 3: El Cementerio de los Libros Olvidados</Contenido_cap> 
-            </Capítulo_lib>                   
-            <Capítulo_lib páginas="22">
-                <Contenido_cap información="ewq">&Cap; 4: La Ciudad de las Damas</Contenido_cap>
-            </Capítulo_lib>                    
-            <Capítulo_lib páginas="14">
-                <Contenido_cap información="kiy">&Cap; 5: La Dama del Anís</Contenido_cap>
-            </Capítulo_lib>                    
-            <Capítulo_lib páginas="19">
-                <Contenido_cap información="gfs">&Cap; 6: El Palacio de la Medianoche</Contenido_cap>
-            </Capítulo_lib>                    
-            <Capítulo_lib páginas="28">
-                <Contenido_cap información="fwe">&Cap; 7: La Mujer de Vapor</Contenido_cap>
-            </Capítulo_lib>                    
-            <Capítulo_lib páginas="27">
-                <Contenido_cap información="iuyl">&Cap; 8: El Prisionero del Cielo</Contenido_cap>                
-            </Capítulo_lib>
-            <Capítulo_lib páginas="16">
-                <Contenido_cap información="sDSF">&Cap; 9: El Dominio de las Sombras</Contenido_cap>                
-            </Capítulo_lib>
-            <Capítulo_lib páginas="20">
-                <Contenido_cap información="eqd">&Cap; 10: El Cementerio de los Libros Olvidados II</Contenido_cap> 
-            </Capítulo_lib>
+            <Capitulo_lib paginas="10">
+                <Contenido_cap informacion="gag">Prólogo: La Sombra del Viento</Contenido_cap>
+            </Capitulo_lib>                       
+            <Capitulo_lib paginas="25">
+                <Contenido_cap informacion="fda">&Cap; 1: La Ciudad de los Prodigios</Contenido_cap>
+            </Capitulo_lib>                    
+            <Capitulo_lib paginas="32">
+                <Contenido_cap informacion="rwqt">&Cap; 2: La Penumbra de los Sentidos</Contenido_cap>
+            </Capitulo_lib>                    
+            <Capitulo_lib paginas="18">
+                <Contenido_cap informacion="nrt">&Cap; 3: El Cementerio de los Libros Olvidados</Contenido_cap> 
+            </Capitulo_lib>                   
+            <Capitulo_lib paginas="22">
+                <Contenido_cap informacion="ewq">&Cap; 4: La Ciudad de las Damas</Contenido_cap>
+            </Capitulo_lib>                    
+            <Capitulo_lib paginas="14">
+                <Contenido_cap informacion="kiy">&Cap; 5: La Dama del Anís</Contenido_cap>
+            </Capitulo_lib>                    
+            <Capitulo_lib paginas="19">
+                <Contenido_cap informacion="gfs">&Cap; 6: El Palacio de la Medianoche</Contenido_cap>
+            </Capitulo_lib>                    
+            <Capitulo_lib paginas="28">
+                <Contenido_cap informacion="fwe">&Cap; 7: La Mujer de Vapor</Contenido_cap>
+            </Capitulo_lib>                    
+            <Capitulo_lib paginas="27">
+                <Contenido_cap informacion="iuyl">&Cap; 8: El Prisionero del Cielo</Contenido_cap>                
+            </Capitulo_lib>
+            <Capitulo_lib paginas="16">
+                <Contenido_cap informacion="sDSF">&Cap; 9: El Dominio de las Sombras</Contenido_cap>                
+            </Capitulo_lib>
+            <Capitulo_lib paginas="20">
+                <Contenido_cap informacion="eqd">&Cap; 10: El Cementerio de los Libros Olvidados II</Contenido_cap> 
+            </Capitulo_lib>
         </Indice_lib>
-        <Año_publicación>2001</Año_publicación>
+        <Anio_publicacion>2001</Anio_publicacion>
         <Editorial>Planeta</Editorial>      
     </Libro> 
 
-    <Periódico Id="P0519" tipo_clase="nacional" fecha_publicación="2023/02/23">
+    <Periodico Id="P0519" tipo_clase="nacional" fecha_publicacion="2023/02/23">
         <Secciones_per>
-            <Sección_per tipo_sección="Económica">
-                <Artículo Autor="Matias Prats">
-                    <Contenido_art Información="fdafad">Se baja el IVA de los productos básicos</Contenido_art>
-                </Artículo>
-            </Sección_per>
-            <Sección_per tipo_sección="Nacional">
-                <Artículo Autor="Pedro Piqueras">
-                    <Contenido_art Información="djfak">Comienza la precampaña electoral</Contenido_art>
-                </Artículo>
-            </Sección_per>
-            <Sección_per tipo_sección="Internacional">
-                <Artículo Autor="Matias Prats">
-                    <Contenido_art Información="dfaf">Se firma la paz en Ucrania</Contenido_art>
-                </Artículo>
-            </Sección_per>
-            <Sección_per tipo_sección="Nacional">
-                <Artículo Autor="José Ribagorda">
-                    <Contenido_art Información="gehr">Huelga de médicos en Madrid</Contenido_art>
-                </Artículo>
-            </Sección_per>
-            <Sección_per tipo_sección="Nacional">
-                <Artículo Autor="Isabel Jiménez">
-                    <Contenido_art Información="grwe">Comienza la fiesta del cine</Contenido_art>
-                </Artículo>
-            </Sección_per>   
-            <Sección_per tipo_sección="Deportes">
-                <Artículo Autor="Matias Prats Jr.">
-                    <Contenido_art Información="iuyl">Real Madrid se prepara para las semifinales de la Liga de Campeones</Contenido_art>
-                </Artículo>
-            </Sección_per>
-            <Sección_per tipo_sección="Nacional">
-                <Artículo Autor="Roberto Brasero">
-                    <Contenido_art Información="htre">Nueva ola de calor llega a la península</Contenido_art>
-                </Artículo>
-            </Sección_per>     
+            <Seccion_per tipo_seccion="Economica">
+                <Articulo Autor="Matias Prats">
+                    <Contenido_art Informacion="fdafad">Se baja el IVA de los productos básicos</Contenido_art>
+                </Articulo>
+            </Seccion_per>
+            <Seccion_per tipo_seccion="Nacional">
+                <Articulo Autor="Pedro Piqueras">
+                    <Contenido_art Informacion="djfak">Comienza la precampaña electoral</Contenido_art>
+                </Articulo>
+            </Seccion_per>
+            <Seccion_per tipo_seccion="Internacional">
+                <Articulo Autor="Matias Prats">
+                    <Contenido_art Informacion="dfaf">Se firma la paz en Ucrania</Contenido_art>
+                </Articulo>
+            </Seccion_per>
+            <Seccion_per tipo_seccion="Nacional">
+                <Articulo Autor="José Ribagorda">
+                    <Contenido_art Informacion="gehr">Huelga de médicos en Madrid</Contenido_art>
+                </Articulo>
+            </Seccion_per>
+            <Seccion_per tipo_seccion="Nacional">
+                <Articulo Autor="Isabel Jiménez">
+                    <Contenido_art Informacion="grwe">Comienza la fiesta del cine</Contenido_art>
+                </Articulo>
+            </Seccion_per>   
+            <Seccion_per tipo_seccion="Deportes">
+                <Articulo Autor="Matias Prats Jr.">
+                    <Contenido_art Informacion="iuyl">Real Madrid se prepara para las semifinales de la Liga de Campeones</Contenido_art>
+                </Articulo>
+            </Seccion_per>
+            <Seccion_per tipo_seccion="Nacional">
+                <Articulo Autor="Roberto Brasero">
+                    <Contenido_art Informacion="htre">Nueva ola de calor llega a la península</Contenido_art>
+                </Articulo>
+            </Seccion_per>     
         </Secciones_per>    
         <Indice >
             -Actualidad
@@ -146,11 +146,11 @@
             -El tiempo
             -Anuncios
         </Indice>        
-    </Periódico>
+    </Periodico>
 
     <Revista Id="R0641" tipo_clase="coches" num_paginas="52">
-        <Título>CocheActual</Título>
-        <Número>52</Número>
+        <Titulo>CocheActual</Titulo>
+        <Numero>52</Numero>
         <Indice_de_contenido>
             -Sumario
             -Actualidad
@@ -158,30 +158,30 @@
             -Anuncios
         </Indice_de_contenido>
         <Secciones>
-            <Sección num_paginas="2">
-                <Contenido información="https://www.cocheactual.com/los-precios-de-los-automoviles-siguen-mostrando-una-tendencia-al-alza/">Actualidad</Contenido>
-            </Sección>
-            <Sección num_paginas="2">
-                <Contenido información="https://www.cocheactual.com/trabajos-mas-y-menos-afectados-por-la-inteligencia-artificial/">Actualidad</Contenido>
-            </Sección>
-            <Sección num_paginas="2">
-                <Contenido información="https://www.cocheactual.com/reducir-las-emisiones-del-vehiculo-reduciendo-su-masa/">Actualidad</Contenido>
-            </Sección>
-            <Sección num_paginas="1">
-                <Contenido información="https://www.cocheactual.com/reparacion-de-abolladuras-sin-pintar-o-tecnicas-pdr/">Curiosidades</Contenido>
-            </Sección>
-            <Sección num_paginas="3">
-                <Contenido información="https://www.cocheactual.com/cuanto-cobra-un-mecanico-en-espana-que-perfiles-son-los-mas-buscados-en-automocion/">Curiosidades</Contenido>
-            </Sección>
-            <Sección num_paginas="2">
-                <Contenido información="https://www.cocheactual.com/como-la-electromecanica-del-automovil-ha-cambiado-el-sector-de-la-automocion/">Curiosidades</Contenido>
-            </Sección>
-            <Sección num_paginas="2">
-                <Contenido información="https://www.cocheactual.com/venta-de-vehiculos-en-espana-no-recuperara-niveles-hasta-2030/">Curiosidades</Contenido>
-            </Sección>
-            <Sección num_paginas="1">
-                <Contenido información="https://www.cocheactual.com/el-riesgo-de-la-conectividad-y-ciberseguridad-en-los-vehiculos-coches/">Curiosidades</Contenido>
-            </Sección>
+            <Seccion num_paginas="2">
+                <Contenido informacion="https://www.cocheactual.com/los-precios-de-los-automoviles-siguen-mostrando-una-tendencia-al-alza/">Actualidad</Contenido>
+            </Seccion>
+            <Seccion num_paginas="2">
+                <Contenido informacion="https://www.cocheactual.com/trabajos-mas-y-menos-afectados-por-la-inteligencia-artificial/">Actualidad</Contenido>
+            </Seccion>
+            <Seccion num_paginas="2">
+                <Contenido informacion="https://www.cocheactual.com/reducir-las-emisiones-del-vehiculo-reduciendo-su-masa/">Actualidad</Contenido>
+            </Seccion>
+            <Seccion num_paginas="1">
+                <Contenido informacion="https://www.cocheactual.com/reparacion-de-abolladuras-sin-pintar-o-tecnicas-pdr/">Curiosidades</Contenido>
+            </Seccion>
+            <Seccion num_paginas="3">
+                <Contenido informacion="https://www.cocheactual.com/cuanto-cobra-un-mecanico-en-espana-que-perfiles-son-los-mas-buscados-en-automocion/">Curiosidades</Contenido>
+            </Seccion>
+            <Seccion num_paginas="2">
+                <Contenido informacion="https://www.cocheactual.com/como-la-electromecanica-del-automovil-ha-cambiado-el-sector-de-la-automocion/">Curiosidades</Contenido>
+            </Seccion>
+            <Seccion num_paginas="2">
+                <Contenido informacion="https://www.cocheactual.com/venta-de-vehiculos-en-espana-no-recuperara-niveles-hasta-2030/">Curiosidades</Contenido>
+            </Seccion>
+            <Seccion num_paginas="1">
+                <Contenido informacion="https://www.cocheactual.com/el-riesgo-de-la-conectividad-y-ciberseguridad-en-los-vehiculos-coches/">Curiosidades</Contenido>
+            </Seccion>
         </Secciones>
     </Revista>
 

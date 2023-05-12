@@ -4,7 +4,7 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema">
     <annotation>
         <documentation>
-            Esquema que marca la estructura de un libro, un periódico y una revista de la Biblioteca"
+            Esquema que marca la estructura de un libro, un periodico y una revista de la Biblioteca"
          </documentation>
     </annotation>
     <!-- El nodo raíz se llama Biblioteca-->
@@ -20,14 +20,14 @@
                             <element name="Indice">
                                 <complexType>
                                     <sequence>
-                                        <element name="Capítulo">
+                                        <element name="Capitulo">
                                             <complexType>
                                                 <sequence>
                                                     <element name="Contenido">
                                                         <complexType>
                                                             <simpleContent>
                                                                 <extension base="string">
-                                                                    <attribute name="información" type="string" use="required"></attribute>
+                                                                    <attribute name="informacion" type="string" use="required"></attribute>
                                                                 </extension>
                                                             </simpleContent>
                                                         </complexType>
@@ -36,7 +36,7 @@
                                             </complexType>
                                         </element>
                                     </sequence>
-                                        <attribute name="páginas" use="required">
+                                        <attribute name="paginas" use="required">
                                             <simpleType>
                                                 <restriction base="integer">
                                                     <pattern value="[0-9]"></pattern>
@@ -45,7 +45,7 @@
                                         </attribute>
                                 </complexType>
                             </element>
-                            <element name="Año_de_publicación" >
+                            <element name="Anio_de_publicacion" >
                                 <simpleType>
                                     <restriction base="integer">
                                         <totalDigits value="4"></totalDigits>
@@ -71,23 +71,23 @@
                             </attribute>
                     </complexType>
                 </element>
-                <element name="Periódico">
+                <element name="Periodico">
                     <complexType>
                         <sequence>
                             <element name="Secciones">
                                 <complexType>
                                     <sequence>
-                                        <element name="Sección">
+                                        <element name="Seccion">
                                             <complexType>
                                                 <sequence>
-                                                    <element name="Artículo">
+                                                    <element name="Articulo">
                                                         <complexType>
                                                             <sequence>
                                                                 <element name="Contenido">
                                                                     <complexType>
                                                                         <simpleContent>
                                                                             <extension base="string">
-                                                                                <attribute name="Información" type="string" use="required"></attribute>
+                                                                                <attribute name="Informacion" type="string" use="required"></attribute>
                                                                             </extension>
                                                                         </simpleContent>
                                                                     </complexType>
@@ -97,7 +97,7 @@
                                                         </complexType>
                                                     </element>
                                                 </sequence>
-                                                <attribute name="tipo_sección" type="string" use="required"></attribute>
+                                                <attribute name="tipo_seccion" type="string" use="required"></attribute>
                                             </complexType>
                                         </element>
                                     </sequence>
@@ -113,7 +113,7 @@
                                 </simpleType>
                             </attribute>
                             <attribute name="tipo_clase" type="string" use="required"></attribute>
-                            <attribute name="fecha_publicación" use="required">
+                            <attribute name="fecha_publicacion" use="required">
                                 <simpleType>
                                     <restriction base="string">
                                         <length value="10"></length>
@@ -126,7 +126,7 @@
                     <complexType>
                         <sequence>
                             <element name="Titulo" type="string" />                            
-                            <element name="Número">
+                            <element name="Numero">
                                 <simpleType>
                                     <restriction base="integer">
                                         <pattern value="[0-9]"></pattern>
@@ -137,14 +137,14 @@
                             <element name="Secciones"> 
                                 <complexType>
                                     <sequence>
-                                        <element name="Sección">
+                                        <element name="Seccion">
                                             <complexType>
                                                 <sequence>
                                                     <element name="Contenido">
                                                         <complexType>
                                                             <simpleContent>
                                                                 <extension base="string">
-                                                                    <attribute name="información" type="string" use="required"></attribute>
+                                                                    <attribute name="informacion" type="string" use="required"></attribute>
                                                                 </extension>
                                                             </simpleContent>
                                                         </complexType>
