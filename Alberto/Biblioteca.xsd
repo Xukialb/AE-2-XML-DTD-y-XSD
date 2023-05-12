@@ -4,7 +4,7 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema">
     <annotation>
         <documentation>
-            Esquema que marca la estructura de un libro de la Biblioteca"
+            Esquema que marca la estructura de un libro, un periódico y una revista de la Biblioteca"
          </documentation>
     </annotation>
     <!-- El nodo raíz se llama Biblioteca-->
