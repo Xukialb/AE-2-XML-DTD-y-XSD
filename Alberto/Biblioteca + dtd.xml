@@ -21,7 +21,6 @@
     <!ELEMENT Editorial (#PCDATA)>
     <!ENTITY Cap "Capitulo">
 
-
     <!ELEMENT Periodico (Secciones_per,Indice)>
     <!ATTLIST Periodico Id ID #REQUIRED>
     <!ATTLIST Periodico tipo_clase (nacional | internacional) #REQUIRED>
@@ -38,7 +37,6 @@
     <!ATTLIST Contenido_art Informacion CDATA #REQUIRED>
     
     <!ELEMENT Indice (#PCDATA)> 
-
 
     <!ELEMENT Revista (Titulo,Numero,Indice_de_contenido,Secciones)>
     <!ATTLIST Revista Id ID #REQUIRED>
@@ -58,7 +56,12 @@
     <Libro Id="L7514" tipo_clase="novela" num_paginas="522">
         <Titulo_lib>La sombra del viento</Titulo_lib>
         <Autor>Carlos Ruiz Zafon</Autor>
-        <Sinopsis>Barcelona, 1945: Un muchacho, Daniel Sempere, es llevado por su padre a un misterioso lugar en el corazón del casco antiguo: El Cementerio de los Libros Olvidados. Allí, Daniel encuentra un libro llamado La Sombra del Viento, por Julián Carax, que cambiará su vida para siempre. A medida que Daniel investiga la vida y obra de Carax, se ve arrastrado a un peligroso laberinto de secretos y intrigas que lo llevan al corazón de la Barcelona de la posguerra.</Sinopsis>            
+        <Sinopsis>Barcelona, 1945: Un muchacho, Daniel Sempere, es llevado por su padre a un 
+        misterioso lugar en el corazón del casco antiguo: El Cementerio de los Libros Olvidados. 
+        Allí, Daniel encuentra un libro llamado La Sombra del Viento, por Julián Carax, que cambiará 
+        su vida para siempre. A medida que Daniel investiga la vida y obra de Carax, se ve arrastrado 
+        a un peligroso laberinto de secretos y intrigas que lo llevan al corazón de la Barcelona de 
+        la posguerra.</Sinopsis>            
         <Indice_lib>
             <Capitulo_lib paginas="10">
                 <Contenido_cap informacion="gag">Prólogo: La Sombra del Viento</Contenido_cap>
