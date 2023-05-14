@@ -20,7 +20,7 @@
                             <element name="Indice_lib">
                                 <complexType>
                                     <sequence>
-                                        <element name="Capitulo_lib">
+                                        <element name="Capitulo_lib" minOccurs="1" maxOccurs="unbounded">
                                             <complexType>
                                                 <sequence>
                                                     <element name="Contenido_cap">
@@ -65,7 +65,7 @@
                             <element name="Secciones_per">
                                 <complexType>
                                     <sequence>
-                                        <element name="Seccion_per">
+                                        <element name="Seccion_per" minOccurs="1" maxOccurs="unbounded">
                                             <complexType>
                                                 <sequence>
                                                     <element name="Articulo">
@@ -113,7 +113,7 @@
                             <element name="Secciones"> 
                                 <complexType>
                                     <sequence>
-                                        <element name="Seccion">
+                                        <element name="Seccion" minOccurs="1" maxOccurs="unbounded">
                                             <complexType>
                                                 <sequence>
                                                     <element name="Contenido">
