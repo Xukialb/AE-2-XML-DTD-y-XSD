@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE bilbioteca SYSTEM "Anabella_biblioteca.xsd">
+<!DOCTYPE bilbioteca SYSTEM "Anabella/Anabella_biblioteca.xsd">
 <biblioteca>
     <libros>
         <libro id="L123" tipo_clase="novela">
@@ -51,15 +51,15 @@
         </revista>
     </revistas>
     <periodicos>
-        <periodico id="P101" tipo_clase="nacional" fecha_publicacion="30/04/2023">
+        <periodico id="P101" tipo_clase="nacional" fecha_publicacion="2023/04/12">
             <secciones>
                 <seccion_per tipo_seccion="economica"> 
-                <articulo autor="Marta Rivas">Nuevos fondos de inversión</articulo>
-                <contenido_p enlace="url"></contenido_p>
+                    <articulo autor="Marta Rivas">Nuevos fondos de inversión</articulo>
+                    <contenido_p enlace="url"></contenido_p>
                 </seccion_per>
                 <seccion_per tipo_seccion="opinion">
-                <articulo autor="Sol Harf">"Entre tazas de cafe"</articulo>
-                <contenido_p enlace="url"></contenido_p>
+                    <articulo autor="Sol Harf">"Entre tazas de cafe"</articulo>
+                    <contenido_p enlace="url"></contenido_p>
                 </seccion_per>
                 <seccion_per tipo_seccion="deportes">
                     <articulo autor="Marta Re">"El superclasico..."</articulo>
