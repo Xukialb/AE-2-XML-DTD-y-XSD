@@ -21,7 +21,7 @@ xsi:noNamespaceSchemaLocation="Biblioteca.xsd">
                 <Contenido_cap informacion="rwqt">Capitulo 2: La Penumbra de los Sentidos</Contenido_cap>
             </Capitulo_lib>                    
             <Capitulo_lib paginas="18">
-                <Contenido_cap informacion="nrt"> 3: El Cementerio de los Libros Olvidados</Contenido_cap> 
+                <Contenido_cap informacion="nrt">Capitulo 3: El Cementerio de los Libros Olvidados</Contenido_cap> 
             </Capitulo_lib>                   
             <Capitulo_lib paginas="22">
                 <Contenido_cap informacion="ewq">Capitulo 4: La Ciudad de las Damas</Contenido_cap>
