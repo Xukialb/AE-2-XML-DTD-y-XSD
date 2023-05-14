@@ -1,152 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema">
-    <element name="blibioteca">
-        <complexType>
-            <sequence>
-                <element name="libros">
-                    <complexType>
-                        <sequence>
-                            <element name="libro" maxOccurs="unbounded">
-                                <complexType>
-                                    <sequence>
-                                        <element name="titulo" type="string" maxOccurs="1"/>
-                                        <element name="sinopsis" type="string"/>
-                                        <element name="indice">
-                                            <complexType>
-                                                <sequence>
-                                                    <element name="item">
-                                                        <complexType>
-                                                            <simpleContent>
-                                                                <extension base="integer">
-                                                                    <attribute name="pagina" type="integer" use="required"/>
-                                                                </extension>                                                               
-                                                            </simpleContent>
-                                                        </complexType>
-                                                    </element>
-                                                </sequence>                                            
-                                            </complexType>
-                                        </element>
-                                        <element name="capitulo" maxOccurs="20">
-                                            <complexType>
-                                                <sequence>
-                                                    <element name="contenido">
-                                                        <complexType>                                                                                                                     <simpleContent>
-                                                                <extension base="string">
-                                                                    <attribute name="enlace" type="string" use="required"/>
-                                                                </extension>
-                                                            </simpleContent>                                                             
-                                                        </complexType>
-                                                    </element>
-                                                </sequence>
-                                                    <attribute name="id_capitulo" type="string" use="required"/> 
-                                                        <simpleType>
-                                                            <restriction base="sring">
-                                                                <pattern value="[L][0-9]{4}"/>
-                                                            </restriction>
-                                                        </simpleType>                                                         
-                                                    <attribute name="titulo_cap" type="string" use="required"/>
-                                                    <attribute name="ipaginas" type="integer" use="required"/>
-                                            </complexType>                                        
-                                        </element>                                        
-                                    </sequence>
-                                    <attribute name="id" type="string" use="required"/>
-                                    <attribute name="tipo_clase" type="string" use="required"/>
-                                </complexType>
-                            </element>
-                        </sequence>                    
-                    </complexType>                
-                </element>
-                <element name="revistas">
-                    <complexType>
-                        <sequence>
-                            <element name="revista" maxOccurs="unbounded">
-                                <complexType>
-                                    <sequence>
-                                        <element name="titulo_rev" type="string"/>
-                                        <element name="numero" type="integer"/>                                            
-                                        <element name="indice_rev">
-                                            <complexType>
-                                                <sequence>
-                                                    <element name="item">
-                                                        <complexType>
-                                                            <simpleContent>
-                                                                <extension base="integer">
-                                                                    <attribute name="pagina" type="integer" use="required"/>
-                                                                </extension>
-                                                            </simpleContent>                                                        
-                                                        </complexType>                                                    
-                                                    </element>
-                                                </sequence>
-                                            </complexType>
-                                        </element>
-                                        <element name="seccion_r" minOccurs="1">
-                                            <complexType>                                                
-                                                    <attribute name="titulo" type="string" use="required"/>
-                                                    <attribute name="paginas" type="integer" use="required"/>                                               
-                                            </complexType>
-                                        </element>
-                                        <element name="contenido">
-                                            <complexType>
-                                                <attribute name="enlace" type="string" use="required"/>
-                                            </complexType>
-                                        </element>
-                                    </sequence>
-                                    <attribute name="id" use="required"/>  
-                                        <simpleType>
-                                            <restriction base="sring">
-                                                <pattern value="[R][0-9]{4}"/>
-                                            </restriction>
-                                        </simpleType>                                                                            
-                                    <attribute name="tipo_clase" type="string" use="required"/>
-                                </complexType>
-                            </element>
-                        </sequence>                    
-                    </complexType>
-                </element>
-                <element name="periodicos">
-                    <complexType>
-                        <sequence>
-                            <element name="periodico" maxOccurs="unbounded">
-                                <complexType>
-                                    <sequence>                                    
-                                        <element name="secciones">
-                                            <complexType>
-                                                <sequence>
-                                                    <element name="seccion_per" maxOccurs="6">
-                                                        <complexType>
-                                                            <sequence>
-                                                                <element name="articulo">
-                                                                    <complexType>
-                                                                        <attribute name="autor" type="string" use="required"/>
-                                                                    </complexType>
-                                                                </element>
-                                                                <element name="contenido_p">
-                                                                    <complexType>
-                                                                        <attribute name="enlace" type="string" use="required"/>
-                                                                    </complexType>
-                                                                </element>
-                                                            </sequence>
-                                                                <attribute name="tipo_seccion" type="string" use="required"/>
-                                                        </complexType>
-                                                    </element>
-                                                </sequence>
-                                            </complexType>
-                                        </element>
-                                    </sequence>
-                                    <attribute name="id" type="string" use="required"/>
-                                        <simpleType>
-                                            <restriction base="sring">
-                                                <pattern value="[P][0-9]{4}"/>
-                                            </restriction>
-                                        </simpleType>         
-                                    <attribute name="tipo_clase" type="string" use="required"/>
-                                    <attribute name="fecha_publicacion" type="date" use="required"/>
-                                </complexType>
-                            </element>
-                        </sequence>
-                    </complexType>
-                </element>            
-            </sequence>        
-        </complexType>      
-    </element>
+
+ <element name="biblioteca"> 
+    <complexType>
+        <sequence>
+            <element name="libros">
+                <complexType>
+                    <sequence>
+                        <element name="libro">
+                            <complexType>
+                                <sequence>
+                                    <element name="titulo" type="string" />
+                                    <element name="sinopsis" type="string"/>
+                                    <element name="indice">
+                                        <complexType>
+                                            <sequence>
+                                                <element name="item" maxOccurs="unbounded" >
+                                                    <complexType>
+                                                        <simpleContent>
+                                                            <extension base="string">
+                                                                <attribute name="pagina" type="string" use="required" />
+                                                            </extension>
+                                                        </simpleContent>
+                                                    </complexType>
+                                                </element>
+                                            </sequence>
+                                        </complexType>
+                                    </element>
+                                    <element name="capitulo" minOccurs="1" maxOccurs="unbounded">
+                                        <complexType>
+                                            <sequence>
+                                                <element name="contenido" minOccurs="1" maxOccurs="unbounded">
+                                                    <complexType>
+                                                        <simpleContent>
+                                                            <extension base="string">
+                                                                <attribute name="enlace" type="string" use="required" />
+                                                            </extension>
+                                                        </simpleContent>  
+                                                    </complexType>
+                                                </element>
+                                            </sequence>
+                                            <attribute name="id_capitulo" type="string" use="required" />
+                                            <attribute name="titulo_cap" type="string" use="required" />
+                                            <attribute name="paginas" type="unsignedByte" use="required" />
+                                        </complexType>
+                                    </element>                        
+                                </sequence>
+                                <attribute name="id_libro" type="string" use="required" />
+                                <attribute name="tipo_clase" type="string" use="required" />
+                            </complexType>
+                        </element>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="revistas">
+                <complexType>
+                    <sequence>
+                        <element name="revista">
+                            <complexType>
+                                <sequence>
+                                    <element name="titulo_rev" type="string" />
+                                    <element name="numero" type="string" />
+                                    <element name="indice_rev">
+                                        <complexType>
+                                            <sequence>
+                                                <element  name="item" maxOccurs="unbounded">
+                                                    <complexType>
+                                                        <simpleContent>
+                                                            <extension base="string">
+                                                                <attribute name="pagina" type="string" use="required" />
+                                                            </extension>
+                                                        </simpleContent>
+                                                    </complexType>
+                                                </element>
+                                            </sequence>
+                                        </complexType>
+                                    </element>
+                                    <element name="seccion_r" maxOccurs="unbounded">
+                                        <complexType>
+                                            <attribute name="titulo" type="string" use="required" />
+                                            <attribute name="paginas" type="string" use="required" />
+                                        </complexType>
+                                    </element>
+                                    <element name="contenido_rev">
+                                        <complexType>
+                                            <simpleContent>
+                                                <extension base="string">
+                                                <attribute name="enlace" type="string" use="required" />
+                                                </extension>
+                                            </simpleContent>
+                                        </complexType>
+                                    </element>
+                                    <element name="paginas" type="string" />
+                                </sequence>
+                                <attribute name="id_rev" type="string" use="required" />
+                                <attribute name="tipo_clase" type="string" use="required" />
+                            </complexType>
+                        </element>  
+                    </sequence>
+                </complexType>
+            </element>          
+            <element name="periodicos">
+                <complexType>
+                    <sequence>
+                        <element name="periodico">
+                            <complexType>
+                                <sequence>
+                                    <element name="secciones">
+                                        <complexType>
+                                            <sequence>
+                                                <element name="seccion_per" maxOccurs="unbounded" >
+                                                    <complexType>
+                                                        <sequence>
+                                                            <element name="articulo">
+                                                                <complexType>
+                                                                    <simpleContent>
+                                                                        <extension base="string">
+                                                                            <attribute name="autor" type="string" use="required" />
+                                                                        </extension>
+                                                                    </simpleContent>
+                                                                </complexType>
+                                                            </element>
+                                                            <element name="contenido_p">
+                                                                <complexType>
+                                                                    <simpleContent>
+                                                                        <extension base="string">
+                                                                            <attribute name="enlace" type="string" use="required" />
+                                                                        </extension>
+                                                                    </simpleContent>
+                                                                </complexType>
+                                                            </element>
+                                                        </sequence>
+                                                        <attribute name="tipo_seccion" type="string" use="required" />
+                                                    </complexType>
+                                                </element>
+                                            </sequence>
+                                        </complexType>
+                                    </element>
+                                </sequence>
+                                <attribute name="id_per" type="string" use="required" />
+                                <attribute name="tipo_clase" type="string" use="required" />
+                                <attribute name="fecha_publicacion" type="date" use="required" />
+                            </complexType>
+                        </element>
+                    </sequence>
+                </complexType>
+            </element>
+        </sequence>
+    </complexType>
+ </element>
 </schema>
