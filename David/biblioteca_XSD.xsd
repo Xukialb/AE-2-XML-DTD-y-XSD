@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+
+<element name="biblioteca">
+    <complexType>
+        <sequence>
+            <element name="libro" maxOccurs="unbounded">
+                <complexType>
+                    <sequence>
+                        <element name="titulo_libro" type="string"/>
+                        <element name="capitulos">
+                            <complexType>
+                                <sequence>
+                                    <element name="capitulo" maxOccurs="unbounded">
+                                        <complexType>
+                                            <sequence>
+                                                <element name="titulo_capitulo" type="string" maxOccurs="unbounded"/>
+                                                <element name="contenido" maxOccurs="unbounded">
+                                                    <complexType>
+                                                        <simpleContent>
+                                                            <extension base="string">
+                                                                <attribute name="enlace" type="string" use="required"></attribute>
+                                                            </extension>
+                                                        </simpleContent>
+                                                    </complexType>
+                                                </element>
+                                            </sequence>
+                                                <attribute name="num_pag" type="integer" use="required"/>
+                                        </complexType>
+                                    </element>
+                                </sequence>    
+                            </complexType>
+                         </element>
+                        <element name="indice">
+                            <complexType>
+                                <sequence>
+                                    <element name="capindice" maxOccurs="unbounded">
+                                        <complexType>
+                                            <sequence>
+                                                <element name="tituloindice" type="string" maxOccurs="unbounded"/>
+                                            </sequence>
+                                            <attribute name="num_pag_cap" type="integer" use="required"/>
+                                        </complexType>
+                                    </element>
+                                </sequence>
+                            </complexType>
+                        </element>
+                        <element name="sinopsis" type="string"/>
+
+                    </sequence>
+                    <!-- ATRIBUTOS DE LIBRO -->
+                    <attribute name="id" use="required">
+                        <simpleType>
+                            <restriction base="string">
+                                <pattern value="L\d{4}"/>
+                            </restriction>
+                        </simpleType>
+                    </attribute>
+
+                    <attribute name="tipo_clase" use="required">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="novela"/>
+                                <enumeration value="infantil"/>
+                                <enumeration value="didactico"/>
+                            </restriction>
+                        </simpleType>
+                    </attribute>
+
+                    <attribute name="numpag_libro" type="integer" use="required"/>
+                </complexType>
+                
+            </element>
+            <element name="revista" maxOccurs="unbounded">
+                <complexType>
+                    <sequence>
+                        <element name="titulo_revista" type="string"/>
+                        <element name="num_revista" type="integer"/>
+                        
+                        <element name="indice_revista">
+                            <complexType>
+                                <sequence>
+                                    <element name="textoindice" maxOccurs="unbounded">
+                                        <complexType>
+                                            <simpleContent>
+                                                <extension base="string">
+                                                    <attribute name="numpag_indice" type="integer" use="required"/>
+                                                </extension>
+                                            </simpleContent>
+                                        </complexType>
+                                   </element>
+                                </sequence>
+                            </complexType>
+                        </element>
+                        
+                        <element name="secciones">
+                            <complexType>
+                                <sequence>
+                                    <element name="seccion" maxOccurs="unbounded">
+                                        <complexType>
+                                            <sequence>
+                                                <element name="contenido">
+                                                    <complexType>
+                                                        <simpleContent>
+                                                            <extension base="string">
+                                                                <attribute name="enlace" type="string" use="required"></attribute>
+                                                            </extension>
+                                                        </simpleContent>
+                                                    </complexType>
+                                                </element>
+                                            </sequence>
+
+                                            <attribute name="numpagseccion" type="integer" use="required"/>
+                                        </complexType>
+                                    </element>
+                                    
+                                </sequence>
+                            </complexType>
+                        </element>
+                    </sequence>
+                    <!-- ATRIBUTOS REVISTA-->
+                   <attribute name="id" use="required">
+                        <simpleType>
+                            <restriction base="string">
+                                <pattern value="R\d{4}"/>
+                            </restriction>
+                        </simpleType>
+                    </attribute>
+
+                    <attribute name="tipo_clase" use="required">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="informatica"/>
+                                <enumeration value="corazon"/>
+                                <enumeration value="coches"/>
+                                <enumeration value="investigacion"/>
+                                <enumeration value="otras"/>
+                            </restriction>
+                        </simpleType>
+                    </attribute>
+
+                    <attribute name="numpag" type="integer" use="required"/>
+
+                </complexType>
+            </element>   
+
+            <element name="periodico" maxOccurs="unbounded">
+                <complexType>
+                    <sequence>
+                        <element name="secciones_periodico">
+                            <complexType>
+                                <sequence>
+                                    <element name="seccion_periodico" maxOccurs="unbounded">
+                                        <complexType>
+                                            <sequence>
+                                                <element name="articulo" maxOccurs="unbounded">
+                                                    <complexType>
+                                                        <attribute name="autor" type="string"/>
+                                                                                                        
+                                                    </complexType>
+                                                </element>
+                                            </sequence>
+
+                                             <attribute name="tipo_seccion" use="required">
+                                                <simpleType>
+                                                    <restriction base="string">
+                                                        <enumeration value="economica"/>
+                                                        <enumeration value="opinion"/>
+                                                        <enumeration value="deportes"/>
+                                                        <enumeration value="nacional"/>
+                                                        <enumeration value="internacional"/>
+                                                    </restriction>
+                                                </simpleType>
+                                             </attribute>
+                                        </complexType>
+                                    </element>
+                                </sequence>
+                            </complexType>
+                        </element>
+                        <element name="indice_periodico" type="string"/>
+                
+                    
+                        <element name="contenido_periodico">
+                                        <complexType>
+                                            <simpleContent>
+                                                <extension base="string">
+                                                    <attribute name="enlace" type="string" use="required"/>
+                                                </extension>
+                                            </simpleContent>
+                                        </complexType>
+                                    </element>
+                                
+                       
+                    </sequence>
+
+                    <!-- ATRIBUTOS DE PERIODICOS -->
+                    <attribute name="id" use="required">
+                        <simpleType>
+                            <restriction base="string">
+                                <pattern value="P\d{4}"/>
+                            </restriction>
+                        </simpleType>
+                    </attribute>
+
+                    <attribute name="tipo_clase" use="required">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="nacionales"/>
+                                <enumeration value="internacionales"/>                          
+                            </restriction>
+                        </simpleType>
+                        
+                    </attribute>
+
+                    <attribute name="fecha_publicacion" type="date" use="required"/>
+                </complexType>
+            </element>
+        </sequence>
+    </complexType>
+</element>
+</schema>

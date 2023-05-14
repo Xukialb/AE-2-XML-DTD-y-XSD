@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<biblioteca  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation= "biblioteca.xsd">
+
+    <libro id="L5426" tipo_clase="novela" numpag_libro="385">
+        <titulo_libro>El misterio del faro</titulo_libro>
+        <capitulos>
+                <capitulo num_pag="5">
+                    <titulo_capitulo>La llegada al faro</titulo_capitulo>
+                    <contenido enlace="www.google.es"/>
+                </capitulo>
+                <capitulo num_pag="10">
+                    <titulo_capitulo>El descubrimiento del secreto</titulo_capitulo>
+                    <contenido enlace="www.enlacecapitulo2"/>
+                </capitulo>
+        </capitulos>
+         <indice>
+                    <capindice num_pag_cap="5">
+                        <tituloindice>La llegada al faro</tituloindice>
+                    </capindice>
+                    <capindice num_pag_cap="10">
+                        <tituloindice>El descrubrimiento del secreto</tituloindice>
+                    </capindice>
+        </indice>
+        
+         
+        <sinopsis>
+        Cuando Laura y su familia llegan al faro en la costa, no pueden evitar sentirse intrigados por los extraños sucesos que ocurren allí. 
+        Al investigar, descubren un secreto oculto en las profundidades del faro que pondrá en peligro sus vidas.
+        ¿Podrán Laura y su familia descubrir la verdad antes de que sea demasiado tarde?
+        </sinopsis>
+
+    </libro>
+
+   
+    <revista id="R5426" tipo_clase="informatica" numpag="60">
+        <titulo_revista>Mas que coches</titulo_revista>
+        <num_revista>15</num_revista>
+        <indice_revista>
+            <textoindice numpag_indice="4">Porchesaledelaquiebra</textoindice>
+            <textoindice numpag_indice="6">Mclarensacanuevomodeloeste2023</textoindice>
+        </indice_revista>
+        <secciones>
+                <seccion numpagseccion="5">
+                    <contenido enlace="www.enlaceseccion1"/>
+                </seccion>
+
+                <seccion numpagseccion="3">
+                    <contenido enlace="www.enlaceseccion2"/>
+                </seccion>
+        </secciones>
+    </revista>
+
+
+    
+        <periodico id="P4592" tipo_clase="nacionales" fecha_publicacion="2023-05-30">
+            <secciones_periodico>
+                <seccion_periodico  tipo_seccion="economica">
+                    <articulo autor="juan perez"/> 
+                    <articulo autor="pepe lara"/>
+                </seccion_periodico>
+                <seccion_periodico tipo_seccion="deportes">
+                    <articulo autor="pedro piñones"/>
+                    <articulo autor="ramiro gomez"/>
+                </seccion_periodico>
+            </secciones_periodico>
+            <indice_periodico>
+                <!--no se que poner-->
+            </indice_periodico>
+            <contenido_periodico enlace="www.googele.es"/>
+        </periodico>
+    
+</biblioteca>
