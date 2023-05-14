@@ -13,7 +13,7 @@ xsi:noNamespaceSchemaLocation="Biblioteca.xsd">
         <Indice_lib>
             <Capitulo_lib paginas="10">
                 <Contenido_cap informacion="gag">Prólogo: La Sombra del Viento</Contenido_cap>
-            </Capitulo_lib>                       
+            </Capitulo_lib>
             <Capitulo_lib paginas="25">
                 <Contenido_cap informacion="fka">Capitulo 1: La Ciudad de los Prodigios</Contenido_cap>
             </Capitulo_lib>                    

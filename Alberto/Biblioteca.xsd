@@ -65,13 +65,13 @@
                             <element name="Secciones_per">
                                 <complexType>
                                     <sequence>
-                                        <element name="Seccion">
+                                        <element name="Seccion_per">
                                             <complexType>
                                                 <sequence>
                                                     <element name="Articulo">
                                                         <complexType>
                                                             <sequence>
-                                                                <element name="Contenido">
+                                                                <element name="Contenido_art">
                                                                     <complexType>
                                                                         <simpleContent>
                                                                             <extension base="string">
