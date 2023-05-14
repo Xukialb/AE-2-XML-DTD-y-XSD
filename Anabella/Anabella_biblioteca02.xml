@@ -1,31 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<biblioteca xsi:noNamespaceSchemaLocation="Anabella_biblioteca02.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-        <biblioteca>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<biblioteca  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation= "Anabella_biblioteca02.xsd">
+
     <libros>
-        <libro id="L123" tipo_clase="novela">
+        <libro id="L5426" tipo_clase="novela">
             <titulo>Nadie queda atrás</titulo>
-            <sinopsis></sinopsis>
+            <sinopsis>La novela "Nadie queda atrás" presenta la historia de un grupo de personas que enfrentan 
+            desafíos y adversidades en su camino hacia la superación personal. Comenzando con el capítulo "Para 
+            comenzar", los personajes luchan por encontrar la motivación y la fuerza para comenzar un nuevo camino
+             en sus vidas. En "Silencio", se enfrentan a los obstáculos internos y externos que los detienen, 
+            mientras que en "Tiempo y esfuerzo" aprenden que el éxito requiere dedicación y paciencia. En "Seguir",
+            los personajes luchan por mantenerse en el camino correcto, mientras que en "Supremacía", enfrentan el 
+            desafío final para alcanzar sus metas. En resumen, "Nadie queda atrás" es una conmovedora novela sobre 
+            la lucha, la perseverancia y la superación personal, que inspirará a cualquier lector que se enfrente a
+            desafíos en su vida.</sinopsis>
              <indice>
                 <item pagina="1">Para comenzar</item>
                 <item pagina="15">Silencio</item>
                 <item pagina="26">Tiempo y esfuerzo</item>
                 <item pagina="38">Seguir</item>
                 <item pagina="54">Supremacía</item>
-            </indice>         
-            <capitulo id_capitulo="L123C1" titulo_cap= "Para comenzar" paginas="14"> </capitulo>
-                <contenido enlace="capitulo1.txt"></contenido>           
-            <capitulo id_capitulo="L123C2" titulo_cap="Silencio" paginas="11"> </capitulo> 
-                <contenido enlace="capitulo2.txt" ></contenido>           
-             <capitulo id_capitulo="L123C3" titulo_cap="Tiempo y esfuerzo" paginas="12"></capitulo>
-                <contenido enlace="capitulo3.txt"></contenido>              
-            <capitulo id_capitulo="L123C4" titulo_cap= "Seguir" paginas="16"> </capitulo>
-                <contenido enlace="capitulo4.txt"></contenido>                
-            <capitulo id_capitulo="L123C5" titulo_cap= "Supremacía" paginas="12"></capitulo>  
-                <contenido enlace="capitulo5.txt"></contenido>            
+            </indice> 
+            <capitulos>       
+                <capitulo id_capitulo="L1231" titulo_cap= "Para comenzar" paginas="14"> 
+                    <contenido enlace="capitulo1.txt"></contenido>
+                </capitulo>           
+                <capitulo id_capitulo="L1232" titulo_cap="Silencio" paginas="11"> 
+                    <contenido enlace="capitulo2.txt" ></contenido>        
+                </capitulo>    
+                <capitulo id_capitulo="L1233" titulo_cap="Tiempo y esfuerzo" paginas="12">
+                    <contenido enlace="capitulo3.txt"></contenido>              
+                </capitulo>
+                <capitulo id_capitulo="L1234" titulo_cap= "Seguir" paginas="16"> 
+                    <contenido enlace="capitulo4.txt"></contenido>                
+                </capitulo>
+                <capitulo id_capitulo="L1235" titulo_cap= "Supremacía" paginas="12">
+                    <contenido enlace="capitulo5.txt"></contenido>            
+                </capitulo>
+            </capitulos>     
         </libro>
     </libros>
     <revistas>
-        <revista id_rev="R001" tipo_clase="coches">
+        <revista id="R0501" tipo_clase="coches">
             <titulo_rev>Lanzamientos 2023</titulo_rev>
             <numero>1</numero>
             <indice_rev> 
@@ -33,25 +50,35 @@
                 <item pagina="9">Estilo y confort</item>
                 <item pagina="13">Los más vendidos</item>
             </indice_rev>
-            <seccion_r titulo="Lo nuevo para este año" paginas="8"> </seccion_r>
-                <contenido_rev enlace="url"></contenido_rev>      
-            <seccion_r titulo="Estilo y confort" paginas="5"> </seccion_r>
-                <contenido_sec enlace="url"></contenido_sec>  
-            <seccion_r titulo="Los más vendidos" paginas="10"></seccion_r>
-                <contenido_sec enlace="url"></contenido_sec>   
-            <paginas>23</paginas>
+            <secciones>
+                <seccion>
+                    <seccion_r titulo="Lo nuevo para este año" paginas="8"/>
+                    <contenido_rev enlace="url"/>    
+                </seccion>
+                  
+                <seccion>
+                    <seccion_r titulo="Estilo y confort" paginas="5"/>
+                    <contenido_rev enlace="url"/>
+                </seccion>
+
+                 <seccion>
+                    <seccion_r titulo="Los más vendidos" paginas="10"/>
+                    <contenido_rev enlace="url"/>   
+                 </seccion>
+                
+            </secciones>
         </revista>
     </revistas>
     <periodicos>
-        <periodico id_per="P101" tipo_clase="nacional" fecha_publicacion="2023-04-11">
+        <periodico id="P1061" tipo_clase="nacional" fecha_publicacion="2023-04-12">
             <secciones>
                 <seccion_per tipo_seccion="economica"> 
-                <articulo autor="Marta Rivas">Nuevos fondos de inversión</articulo>
-                <contenido_p enlace="url"></contenido_p>
+                    <articulo autor="Marta Rivas">Nuevos fondos de inversión</articulo>
+                    <contenido_p enlace="url"></contenido_p>
                 </seccion_per>
                 <seccion_per tipo_seccion="opinion">
-                <articulo autor="Sol Harf">"Entre tazas de cafe"</articulo>
-                <contenido_p enlace="url"></contenido_p>
+                    <articulo autor="Sol Harf">"Entre tazas de cafe"</articulo>
+                    <contenido_p enlace="url"></contenido_p>
                 </seccion_per>
                 <seccion_per tipo_seccion="deportes">
                     <articulo autor="Marta Re">"El superclasico..."</articulo>
@@ -69,4 +96,3 @@
         </periodico>
     </periodicos>
 </biblioteca>
- 

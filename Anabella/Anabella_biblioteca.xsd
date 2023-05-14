@@ -19,7 +19,7 @@
                                                     <complexType>
                                                         <simpleContent>
                                                             <extension base="string">
-                                                                <attribute name="pagina" type="string" use="required" />
+                                                                <attribute name="pagina" type="integer" use="required" />
                                                             </extension>
                                                         </simpleContent>
                                                     </complexType>
@@ -42,7 +42,7 @@
                                             </sequence>
                                             <attribute name="id_capitulo" type="string" use="required" />
                                             <attribute name="titulo_cap" type="string" use="required" />
-                                            <attribute name="paginas" type="unsignedByte" use="required" />
+                                            <attribute name="paginas" type="integer" use="required" />
                                         </complexType>
                                     </element>                        
                                 </sequence>
@@ -67,8 +67,8 @@
                                                 <element  name="item" maxOccurs="unbounded">
                                                     <complexType>
                                                         <simpleContent>
-                                                            <extension base="string">
-                                                                <attribute name="pagina" type="string" use="required" />
+                                                            <extension base="integer">
+                                                                <attribute name="pagina" type="integer" use="required" />
                                                             </extension>
                                                         </simpleContent>
                                                     </complexType>
@@ -79,7 +79,7 @@
                                     <element name="seccion_r" maxOccurs="unbounded">
                                         <complexType>
                                             <attribute name="titulo" type="string" use="required" />
-                                            <attribute name="paginas" type="string" use="required" />
+                                            <attribute name="paginas" type="integer" use="required" />
                                         </complexType>
                                     </element>
                                     <element name="contenido_rev">
@@ -91,7 +91,7 @@
                                             </simpleContent>
                                         </complexType>
                                     </element>
-                                    <element name="paginas" type="string" />
+                                    <element name="paginas" type="integer" />
                                 </sequence>
                                 <attribute name="id_rev" type="string" use="required" />
                                 <attribute name="tipo_clase" type="string" use="required" />
