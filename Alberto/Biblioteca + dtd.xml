@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Biblioteca [
     <!ELEMENT Biblioteca (Libro*,Periodico*,Revista*)>
 
     <!ELEMENT Libro (Titulo_lib,Autor?,Sinopsis,Indice_lib,Anio_publicacion?,Editorial?)>
     <!ATTLIST Libro Id ID #REQUIRED>
-    <!ATTLIST Libro tipo_clase (novela | infantil | didactico) #REQUIRED>
-    <!ATTLIST Libro num_paginas CDATA #REQUIRED>
+    <!ATTLIST Libro tipo_clase (novela | infantil | didactico | otro) "otro">
+    <!ATTLIST Libro num_paginas CDATA #IMPLIED>
     <!ELEMENT Titulo_lib (#PCDATA)>
     <!ELEMENT Autor (#PCDATA)>
     <!ELEMENT Sinopsis (#PCDATA)>
     <!ELEMENT Indice_lib (Capitulo_lib*)>
 
-    <!ELEMENT Capitulo_lib (Contenido_cap*)>
+    <!ELEMENT Capitulo_lib (Contenido_cap+)>
     <!ATTLIST Capitulo_lib paginas CDATA #REQUIRED> 
 
     <!ELEMENT Contenido_cap (#PCDATA)>
@@ -21,15 +21,14 @@
     <!ELEMENT Editorial (#PCDATA)>
     <!ENTITY Cap "Capitulo">
 
-
-    <!ELEMENT Periodico (Secciones_per,Indice)>
+    <!ELEMENT Periodico (Secciones_per*,Indice)>
     <!ATTLIST Periodico Id ID #REQUIRED>
-    <!ATTLIST Periodico tipo_clase (nacional | internacional) #REQUIRED>
-    <!ATTLIST Periodico fecha_publicacion CDATA #IMPLIED>
+    <!ATTLIST Periodico tipo_clase (nacional | internacional) #IMPLIED>
+    <!ATTLIST Periodico fecha_publicacion CDATA #REQUIRED>
     <!ELEMENT Secciones_per (Seccion_per+)>
 
     <!ELEMENT Seccion_per (Articulo+)>
-    <!ATTLIST Seccion_per tipo_seccion (Economica | Opinion | Deportes | Nacional | Internacional) #REQUIRED>
+    <!ATTLIST Seccion_per tipo_seccion (Economica | Opinion | Deportes | Nacional | Internacional | Otros) "Otros">
 
     <!ELEMENT Articulo (Contenido_art+)>
     <!ATTLIST Articulo Autor CDATA #REQUIRED>
@@ -39,17 +38,16 @@
     
     <!ELEMENT Indice (#PCDATA)> 
 
-
     <!ELEMENT Revista (Titulo,Numero,Indice_de_contenido,Secciones)>
     <!ATTLIST Revista Id ID #REQUIRED>
-    <!ATTLIST Revista tipo_clase (informatica | corazon | coches | investigacion | otras) #REQUIRED>
-    <!ATTLIST Revista num_paginas CDATA #REQUIRED>
+    <!ATTLIST Revista tipo_clase (informatica | corazon | coches | investigacion | otras) "otras">
+    <!ATTLIST Revista num_paginas CDATA #IMPLIED>
     <!ELEMENT Titulo (#PCDATA)>
     <!ELEMENT Numero (#PCDATA)>
     <!ELEMENT Indice_de_contenido (#PCDATA)>
     <!ELEMENT Secciones (Seccion*)>
     <!ELEMENT Seccion (Contenido*)>
-    <!ATTLIST Seccion num_paginas CDATA #REQUIRED>
+    <!ATTLIST Seccion num_paginas CDATA #IMPLIED>
 
     <!ELEMENT Contenido (#PCDATA)> 
     <!ATTLIST Contenido informacion CDATA #REQUIRED>
@@ -58,7 +56,12 @@
     <Libro Id="L7514" tipo_clase="novela" num_paginas="522">
         <Titulo_lib>La sombra del viento</Titulo_lib>
         <Autor>Carlos Ruiz Zafon</Autor>
-        <Sinopsis>Barcelona, 1945: Un muchacho, Daniel Sempere, es llevado por su padre a un misterioso lugar en el corazón del casco antiguo: El Cementerio de los Libros Olvidados. Allí, Daniel encuentra un libro llamado La Sombra del Viento, por Julián Carax, que cambiará su vida para siempre. A medida que Daniel investiga la vida y obra de Carax, se ve arrastrado a un peligroso laberinto de secretos y intrigas que lo llevan al corazón de la Barcelona de la posguerra.</Sinopsis>            
+        <Sinopsis>Barcelona, 1945: Un muchacho, Daniel Sempere, es llevado por su padre a un 
+        misterioso lugar en el corazón del casco antiguo: El Cementerio de los Libros Olvidados. 
+        Allí, Daniel encuentra un libro llamado La Sombra del Viento, por Julián Carax, que cambiará 
+        su vida para siempre. A medida que Daniel investiga la vida y obra de Carax, se ve arrastrado 
+        a un peligroso laberinto de secretos y intrigas que lo llevan al corazón de la Barcelona de 
+        la posguerra.</Sinopsis>            
         <Indice_lib>
             <Capitulo_lib paginas="10">
                 <Contenido_cap informacion="gag">Prólogo: La Sombra del Viento</Contenido_cap>

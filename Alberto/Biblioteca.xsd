@@ -15,7 +15,7 @@
                     <complexType>
                         <sequence>
                             <element name="Titulo" type="string" />
-                            <element name="Autor" type="string" minOccurs="1" maxOccurs="unbounded" />
+                            <element name="Autor" type="string" minOccurs="0" maxOccurs="unbounded" />
                             <element name="Sinopsis" type="string" />
                             <element name="Indice">
                                 <complexType>
@@ -52,7 +52,7 @@
                                     </restriction>
                                 </simpleType>
                             </element>    
-                            <element name="Editorial" type="string" minOccurs="1" maxOccurs="unbounded" />
+                            <element name="Editorial" type="string" minOccurs="0" maxOccurs="unbounded" />
                         </sequence>
                             <attribute name="Id" use="required">
                                 <simpleType>
@@ -62,7 +62,7 @@
                                 </simpleType>
                             </attribute>
                             <attribute name="tipo_clase" type="string" use="required"></attribute>
-                            <attribute name="num_paginas" use="required">
+                            <attribute name="num_paginas">
                                 <simpleType>
                                     <restriction base="integer">
                                         <pattern value="[0-9]"></pattern>
