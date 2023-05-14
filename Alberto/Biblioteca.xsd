@@ -14,16 +14,16 @@
                 <element name="Libro">
                     <complexType>
                         <sequence>
-                            <element name="Titulo" type="string" />
+                            <element name="Titulo_lib" type="string" />
                             <element name="Autor" type="string" minOccurs="0"/>
                             <element name="Sinopsis" type="string" />
-                            <element name="Indice">
+                            <element name="Indice_lib">
                                 <complexType>
                                     <sequence>
-                                        <element name="Capitulo">
+                                        <element name="Capitulo_lib">
                                             <complexType>
                                                 <sequence>
-                                                    <element name="Contenido">
+                                                    <element name="Contenido_cap">
                                                         <complexType>
                                                             <simpleContent>
                                                                 <extension base="string">
@@ -33,13 +33,13 @@
                                                         </complexType>
                                                     </element>
                                                 </sequence>
+                                                <attribute name="paginas" type="integer" use="required"/> 
                                             </complexType>
                                         </element>
-                                    </sequence>
-                                        <attribute name="paginas" type="integer" use="required"/>
+                                    </sequence>                                       
                                 </complexType>
                             </element>
-                            <element name="Anio_de_publicacion">
+                            <element name="Anio_publicacion">
                                 <simpleType>
                                     <restriction base="integer">
                                         <totalDigits value="4" />
@@ -62,7 +62,7 @@
                 <element name="Periodico">
                     <complexType>
                         <sequence>
-                            <element name="Secciones">
+                            <element name="Secciones_per">
                                 <complexType>
                                     <sequence>
                                         <element name="Seccion">

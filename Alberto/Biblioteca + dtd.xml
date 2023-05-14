@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:noNamespaceSchemaLocation="Biblioteca.xsd">
+<!DOCTYPE Biblioteca [
+    <!ELEMENT Biblioteca (Libro*,Periodico*,Revista*)>
+
+    <!ELEMENT Libro (Titulo_lib,Autor?,Sinopsis,Indice_lib,Anio_publicacion?,Editorial?)>
+        <!ATTLIST Libro Id ID #REQUIRED>
+        <!ATTLIST Libro tipo_clase (novela | infantil | didactico | otro) "otro">
+        <!ATTLIST Libro num_paginas CDATA #IMPLIED>
+    <!ELEMENT Titulo_lib (#PCDATA)>
+    <!ELEMENT Autor (#PCDATA)>
+    <!ELEMENT Sinopsis (#PCDATA)>
+    <!ELEMENT Indice_lib (Capitulo_lib*)>
+
+    <!ELEMENT Capitulo_lib (Contenido_cap+)>
+        <!ATTLIST Capitulo_lib paginas CDATA #REQUIRED> 
+
+    <!ELEMENT Contenido_cap (#PCDATA)>
+        <!ATTLIST Contenido_cap informacion CDATA #REQUIRED>
+
+    <!ELEMENT Anio_publicacion (#PCDATA)>
+    <!ELEMENT Editorial (#PCDATA)>
+    <!ENTITY Cap "Capitulo">
+
+    <!ELEMENT Periodico (Secciones_per*,Indice)>
+        <!ATTLIST Periodico Id ID #REQUIRED>
+        <!ATTLIST Periodico tipo_clase (nacional | internacional) #IMPLIED>
+        <!ATTLIST Periodico fecha_publicacion CDATA #REQUIRED>
+    <!ELEMENT Secciones_per (Seccion_per+)>
+
+    <!ELEMENT Seccion_per (Articulo+)>
+        <!ATTLIST Seccion_per tipo_seccion (Economica | Opinion | Deportes | Nacional | Internacional | Otros) "Otros">
+
+    <!ELEMENT Articulo (Contenido_art+)>
+        <!ATTLIST Articulo Autor CDATA #REQUIRED>
+
+    <!ELEMENT Contenido_art (#PCDATA)>
+        <!ATTLIST Contenido_art Informacion CDATA #REQUIRED>
+    
+    <!ELEMENT Indice (#PCDATA)> 
+
+    <!ELEMENT Revista (Titulo,Numero,Indice_de_contenido,Secciones)>
+        <!ATTLIST Revista Id ID #REQUIRED>
+        <!ATTLIST Revista tipo_clase (informatica | corazon | coches | investigacion | otros) "otros">
+        <!ATTLIST Revista num_paginas CDATA #IMPLIED>
+    <!ELEMENT Titulo (#PCDATA)>
+    <!ELEMENT Numero (#PCDATA)>
+    <!ELEMENT Indice_de_contenido (#PCDATA)>
+    <!ELEMENT Secciones (Seccion*)>
+    <!ELEMENT Seccion (Contenido*)>
+        <!ATTLIST Seccion num_paginas CDATA #IMPLIED>
+
+    <!ELEMENT Contenido (#PCDATA)> 
+        <!ATTLIST Contenido informacion CDATA #REQUIRED>
+]>        
+
+<Biblioteca>
     <Libro Id="L7514" tipo_clase="novela" num_paginas="522">
         <Titulo_lib>La sombra del viento</Titulo_lib>
         <Autor>Carlos Ruiz Zafon</Autor>
@@ -15,34 +68,34 @@ xsi:noNamespaceSchemaLocation="Biblioteca.xsd">
                 <Contenido_cap informacion="gag">Prólogo: La Sombra del Viento</Contenido_cap>
             </Capitulo_lib>                       
             <Capitulo_lib paginas="25">
-                <Contenido_cap informacion="fka">Capitulo 1: La Ciudad de los Prodigios</Contenido_cap>
+                <Contenido_cap informacion="fda">&Cap; 1: La Ciudad de los Prodigios</Contenido_cap>
             </Capitulo_lib>                    
             <Capitulo_lib paginas="32">
-                <Contenido_cap informacion="rwqt">Capitulo 2: La Penumbra de los Sentidos</Contenido_cap>
+                <Contenido_cap informacion="rwqt">&Cap; 2: La Penumbra de los Sentidos</Contenido_cap>
             </Capitulo_lib>                    
             <Capitulo_lib paginas="18">
-                <Contenido_cap informacion="nrt"> 3: El Cementerio de los Libros Olvidados</Contenido_cap> 
+                <Contenido_cap informacion="nrt">&Cap; 3: El Cementerio de los Libros Olvidados</Contenido_cap> 
             </Capitulo_lib>                   
             <Capitulo_lib paginas="22">
-                <Contenido_cap informacion="ewq">Capitulo 4: La Ciudad de las Damas</Contenido_cap>
+                <Contenido_cap informacion="ewq">&Cap; 4: La Ciudad de las Damas</Contenido_cap>
             </Capitulo_lib>                    
             <Capitulo_lib paginas="14">
-                <Contenido_cap informacion="kiy">Capitulo 5: La Dama del Anís</Contenido_cap>
+                <Contenido_cap informacion="kiy">&Cap; 5: La Dama del Anís</Contenido_cap>
             </Capitulo_lib>                    
             <Capitulo_lib paginas="19">
-                <Contenido_cap informacion="gfs">Capitulo 6: El Palacio de la Medianoche</Contenido_cap>
+                <Contenido_cap informacion="gfs">&Cap; 6: El Palacio de la Medianoche</Contenido_cap>
             </Capitulo_lib>                    
             <Capitulo_lib paginas="28">
-                <Contenido_cap informacion="fwe">Capitulo 7: La Mujer de Vapor</Contenido_cap>
+                <Contenido_cap informacion="fwe">&Cap; 7: La Mujer de Vapor</Contenido_cap>
             </Capitulo_lib>                    
             <Capitulo_lib paginas="27">
-                <Contenido_cap informacion="iuyl">Capitulo 8: El Prisionero del Cielo</Contenido_cap>                
+                <Contenido_cap informacion="iuyl">&Cap; 8: El Prisionero del Cielo</Contenido_cap>                
             </Capitulo_lib>
             <Capitulo_lib paginas="16">
-                <Contenido_cap informacion="sDSF">Capitulo 9: El Dominio de las Sombras</Contenido_cap>                
+                <Contenido_cap informacion="sDSF">&Cap; 9: El Dominio de las Sombras</Contenido_cap>                
             </Capitulo_lib>
             <Capitulo_lib paginas="20">
-                <Contenido_cap informacion="eqd">Capitulo 10: El Cementerio de los Libros Olvidados II</Contenido_cap> 
+                <Contenido_cap informacion="eqd">&Cap; 10: El Cementerio de los Libros Olvidados II</Contenido_cap> 
             </Capitulo_lib>
         </Indice_lib>
         <Anio_publicacion>2001</Anio_publicacion>
@@ -112,7 +165,7 @@ xsi:noNamespaceSchemaLocation="Biblioteca.xsd">
             <Seccion num_paginas="2">
                 <Contenido informacion="https://www.cocheactual.com/los-precios-de-los-automoviles-siguen-mostrando-una-tendencia-al-alza/">Actualidad</Contenido>
             </Seccion>
-            <Seccion num_paginas="4">
+            <Seccion num_paginas="2">
                 <Contenido informacion="https://www.cocheactual.com/trabajos-mas-y-menos-afectados-por-la-inteligencia-artificial/">Actualidad</Contenido>
             </Seccion>
             <Seccion num_paginas="2">
