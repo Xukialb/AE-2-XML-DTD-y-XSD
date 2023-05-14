@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE biblioteca [
+
+<!--LIBROS-->
+
+
+<!ELEMENT biblioteca (libro*, revista*, periodico*)>
+    <!ELEMENT libro (titulo_libro, capitulos, indice, sinopsis)>
+            <!ATTLIST libro id ID #REQUIRED>
+            <!ATTLIST libro tipo_clase (novela | infantil | didactico) #REQUIRED>
+            <!ATTLIST libro numpag_libro CDATA #REQUIRED>
+
+        <!ELEMENT titulo_libro  (#PCDATA)>
+
+
+        <!ELEMENT capitulos (capitulo*)>
+            <!ELEMENT capitulo (titulo_capitulo, contenido)>
+                <!ATTLIST capitulo num_pag CDATA #REQUIRED>
+            <!ELEMENT  contenido (#PCDATA)>
+            <!ELEMENT titulo_capitulo (#PCDATA)>
+                <!ATTLIST contenido enlace CDATA #REQUIRED>
+
+
+
+
+        <!ELEMENT indice (capindice*)>
+            <!ELEMENT capindice (tituloindice)>
+                <!ATTLIST capindice num_pag_cap CDATA #REQUIRED>
+                <!ELEMENT tituloindice (#PCDATA)>
+
+        <!ELEMENT sinopsis (#PCDATA)>
+
+<!--REVISTAS-->
+
+    <!ELEMENT revista (titulo_revista, num_revista, indice_revista, secciones)>
+        <!ATTLIST revista id ID #REQUIRED>
+        <!ATTLIST revista tipo_clase (informatica | corazon  | coches | investigacion | otras) #REQUIRED>
+        <!ATTLIST revista numpag CDATA #REQUIRED>
+        
+        <!ELEMENT titulo_revista (#PCDATA)>
+        
+        <!ELEMENT num_revista (#PCDATA)>
+
+        <!ELEMENT indice_revista (textoindice*)>
+            <!ELEMENT textoindice (#PCDATA)>
+            <!ATTLIST textoindice numpag_indice CDATA #REQUIRED>
+
+        <!ELEMENT secciones (seccion*)>
+            <!ELEMENT seccion (contenido)>
+                <!ATTLIST seccion numpagseccion CDATA #REQUIRED>
+                <!ATTLIST contenido enlace CDATA #REQUIRED>
+
+
+<!--PERIODICOS-->
+
+    <!ELEMENT periodico (secciones_periodico, indice_periodico, contenido_periodico)>
+        <!ATTLIST periodico id ID #REQUIRED>
+        <!ATTLIST periodico tipo_clase (nacionales | internacionales) #REQUIRED>
+        <!ATTLIST periodico fecha_publicacion CDATA #REQUIRED>
+
+        <!ELEMENT secciones_periodico (seccion_periodico*)>
+            <!ATTLIST seccion_periodico tipo_seccion (economica | opinion | deportes | nacional | internacional) #REQUIRED>
+            <!ELEMENT seccion_periodico (articulo*)>
+                <!ELEMENT articulo (#PCDATA)>
+                <!ATTLIST articulo autor CDATA #REQUIRED>
+        
+        <!ELEMENT indice_periodico (#PCDATA)>
+        <!ELEMENT contenido_periodico (#PCDATA)>
+            <!ATTLIST contenido_periodico enlace CDATA #REQUIRED>
+            
+
+
+
+
+
+]>
+<biblioteca>
+
+    <libro id="L5426" tipo_clase="novela" numpag_libro="385">
+        <titulo_libro>El misterio del faro</titulo_libro>
+        <capitulos>
+                <capitulo num_pag="5">
+                    <titulo_capitulo>La llegada al faro</titulo_capitulo>
+                    <contenido enlace="www.google.es"/>
+                </capitulo>
+                <capitulo num_pag="10">
+                    <titulo_capitulo>El descubrimiento del secreto</titulo_capitulo>
+                    <contenido enlace="www.enlacecapitulo2"/>
+                </capitulo>
+        </capitulos>
+         <indice>
+                    <capindice num_pag_cap="5">
+                        <tituloindice>La llegada al faro</tituloindice>
+                    </capindice>
+                    <capindice num_pag_cap="10">
+                        <tituloindice>El descrubrimiento del secreto</tituloindice>
+                    </capindice>
+        </indice>
+        
+         
+        <sinopsis>
+        Cuando Laura y su familia llegan al faro en la costa, no pueden evitar sentirse intrigados por los extraños sucesos que ocurren allí. 
+        Al investigar, descubren un secreto oculto en las profundidades del faro que pondrá en peligro sus vidas.
+        ¿Podrán Laura y su familia descubrir la verdad antes de que sea demasiado tarde?
+        </sinopsis>
+
+    </libro>
+
+   
+    <revista id="R8A5" tipo_clase="informatica" numpag="60">
+        <titulo_revista>Mas que coches</titulo_revista>
+        <num_revista>15</num_revista>
+        <indice_revista>
+            <textoindice numpag_indice="4">Porche sale de la quiebra</textoindice>
+            <textoindice numpag_indice="6">Mclaren saca nuevo modelo este 2023</textoindice>
+        </indice_revista>
+        <secciones>
+                <seccion numpagseccion="5">
+                    <contenido enlace="www.enlaceseccion1"/>
+                </seccion>
+
+                <seccion numpagseccion="3">
+                    <contenido enlace="www.enlaceseccion2"/>
+                </seccion>
+        </secciones>
+    </revista>
+
+
+    
+        <periodico id="P4592" tipo_clase="nacionales" fecha_publicacion="2023-05-30">
+            <secciones_periodico>
+                <seccion_periodico  tipo_seccion="economica">
+                    <articulo autor="juan perez"/> 
+                    <articulo autor="pepe lara"/>
+                </seccion_periodico>
+                <seccion_periodico tipo_seccion="deportes">
+                    <articulo autor="pedro piñones"/>
+                    <articulo autor="ramiro gomez"/>
+                </seccion_periodico>
+            </secciones_periodico>
+            <indice_periodico>
+                <!--no se que poner-->
+            </indice_periodico>
+            <contenido_periodico enlace="www.googele.es"/>
+        </periodico>
+    
+</biblioteca>
