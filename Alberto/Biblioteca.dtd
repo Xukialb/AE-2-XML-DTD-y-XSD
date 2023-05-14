@@ -1,0 +1,51 @@
+    <!ELEMENT Biblioteca (Libro*,Periodico*,Revista*)>
+
+    <!ELEMENT Libro (Titulo_lib,Autor?,Sinopsis,Indice_lib,Anio_publicacion?,Editorial?)>
+        <!ATTLIST Libro Id ID #REQUIRED>
+        <!ATTLIST Libro tipo_clase (novela | infantil | didactico | otro) "otro">
+        <!ATTLIST Libro num_paginas CDATA #IMPLIED>
+    <!ELEMENT Titulo_lib (#PCDATA)>
+    <!ELEMENT Autor (#PCDATA)>
+    <!ELEMENT Sinopsis (#PCDATA)>
+    <!ELEMENT Indice_lib (Capitulo_lib*)>
+
+    <!ELEMENT Capitulo_lib (Contenido_cap+)>
+        <!ATTLIST Capitulo_lib paginas CDATA #REQUIRED> 
+
+    <!ELEMENT Contenido_cap (#PCDATA)>
+        <!ATTLIST Contenido_cap informacion CDATA #REQUIRED>
+
+    <!ELEMENT Anio_publicacion (#PCDATA)>
+    <!ELEMENT Editorial (#PCDATA)>
+    <!ENTITY Cap "Capitulo">
+
+    <!ELEMENT Periodico (Secciones_per*,Indice)>
+        <!ATTLIST Periodico Id ID #REQUIRED>
+        <!ATTLIST Periodico tipo_clase (nacional | internacional) #IMPLIED>
+        <!ATTLIST Periodico fecha_publicacion CDATA #REQUIRED>
+    <!ELEMENT Secciones_per (Seccion_per+)>
+
+    <!ELEMENT Seccion_per (Articulo+)>
+        <!ATTLIST Seccion_per tipo_seccion (Economica | Opinion | Deportes | Nacional | Internacional | Otros) "Otros">
+
+    <!ELEMENT Articulo (Contenido_art+)>
+        <!ATTLIST Articulo Autor CDATA #REQUIRED>
+
+    <!ELEMENT Contenido_art (#PCDATA)>
+        <!ATTLIST Contenido_art Informacion CDATA #REQUIRED>
+    
+    <!ELEMENT Indice (#PCDATA)> 
+
+    <!ELEMENT Revista (Titulo,Numero,Indice_de_contenido,Secciones)>
+        <!ATTLIST Revista Id ID #REQUIRED>
+        <!ATTLIST Revista tipo_clase (informatica | corazon | coches | investigacion | otros) "otros">
+        <!ATTLIST Revista num_paginas CDATA #IMPLIED>
+    <!ELEMENT Titulo (#PCDATA)>
+    <!ELEMENT Numero (#PCDATA)>
+    <!ELEMENT Indice_de_contenido (#PCDATA)>
+    <!ELEMENT Secciones (Seccion*)>
+    <!ELEMENT Seccion (Contenido*)>
+        <!ATTLIST Seccion num_paginas CDATA #IMPLIED>
+
+    <!ELEMENT Contenido (#PCDATA)> 
+        <!ATTLIST Contenido informacion CDATA #REQUIRED>

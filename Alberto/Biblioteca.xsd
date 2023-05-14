@@ -15,7 +15,7 @@
                     <complexType>
                         <sequence>
                             <element name="Titulo" type="string" />
-                            <element name="Autor" type="string" minOccurs="0" maxOccurs="unbounded" />
+                            <element name="Autor" type="string" minOccurs="0"/>
                             <element name="Sinopsis" type="string" />
                             <element name="Indice">
                                 <complexType>
@@ -27,7 +27,7 @@
                                                         <complexType>
                                                             <simpleContent>
                                                                 <extension base="string">
-                                                                    <attribute name="informacion" type="string" use="required"></attribute>
+                                                                    <attribute name="informacion" type="string" use="required"/>
                                                                 </extension>
                                                             </simpleContent>
                                                         </complexType>
@@ -36,39 +36,27 @@
                                             </complexType>
                                         </element>
                                     </sequence>
-                                        <attribute name="paginas" use="required">
-                                            <simpleType>
-                                                <restriction base="integer">
-                                                    <pattern value="[0-9]"></pattern>
-                                                </restriction>
-                                            </simpleType>
-                                        </attribute>
+                                        <attribute name="paginas" type="integer" use="required"/>
                                 </complexType>
                             </element>
-                            <element name="Anio_de_publicacion" >
+                            <element name="Anio_de_publicacion">
                                 <simpleType>
                                     <restriction base="integer">
-                                        <totalDigits value="4"></totalDigits>
+                                        <totalDigits value="4" />
                                     </restriction>
                                 </simpleType>
                             </element>    
-                            <element name="Editorial" type="string" minOccurs="0" maxOccurs="unbounded" />
+                            <element name="Editorial" type="string" minOccurs="0"/>
                         </sequence>
                             <attribute name="Id" use="required">
                                 <simpleType>
                                     <restriction base="string">
-                                        <pattern value="[L][0-9]{4}"></pattern>
+                                        <pattern value="[L][0-9]{4}" />
                                     </restriction>
                                 </simpleType>
                             </attribute>
-                            <attribute name="tipo_clase" type="string" use="required"></attribute>
-                            <attribute name="num_paginas">
-                                <simpleType>
-                                    <restriction base="integer">
-                                        <pattern value="[0-9]"></pattern>
-                                    </restriction>
-                                </simpleType>
-                            </attribute>
+                            <attribute name="tipo_clase" type="string" use="required" />
+                            <attribute name="num_paginas" type="integer"/>
                     </complexType>
                 </element>
                 <element name="Periodico">
@@ -87,17 +75,17 @@
                                                                     <complexType>
                                                                         <simpleContent>
                                                                             <extension base="string">
-                                                                                <attribute name="Informacion" type="string" use="required"></attribute>
+                                                                                <attribute name="Informacion" type="string" use="required" />
                                                                             </extension>
                                                                         </simpleContent>
                                                                     </complexType>
                                                                 </element>
                                                             </sequence>
-                                                            <attribute name="Autor" type="string" use="required"></attribute>
+                                                            <attribute name="Autor" type="string" use="required" />
                                                         </complexType>
                                                     </element>
                                                 </sequence>
-                                                <attribute name="tipo_seccion" type="string" use="required"></attribute>
+                                                <attribute name="tipo_seccion" type="string" use="required" />
                                             </complexType>
                                         </element>
                                     </sequence>
@@ -108,31 +96,19 @@
                             <attribute name="Id" use="required">
                                 <simpleType>
                                     <restriction base="string">
-                                        <pattern value="[P][0-9]{4}"></pattern>
+                                        <pattern value="[P][0-9]{4}" />
                                     </restriction>
                                 </simpleType>
                             </attribute>
-                            <attribute name="tipo_clase" type="string" use="required"></attribute>
-                            <attribute name="fecha_publicacion" use="required">
-                                <simpleType>
-                                    <restriction base="string">
-                                        <length value="10"></length>
-                                    </restriction>
-                                </simpleType>
-                            </attribute> 
+                            <attribute name="tipo_clase" type="string" use="required" />
+                            <attribute name="fecha_publicacion" type="date" use="required" /> 
                     </complexType>
                 </element>
                 <element name="Revista">
                     <complexType>
                         <sequence>
                             <element name="Titulo" type="string" />                            
-                            <element name="Numero">
-                                <simpleType>
-                                    <restriction base="integer">
-                                        <pattern value="[0-9]"></pattern>
-                                    </restriction>
-                                </simpleType>
-                            </element>
+                            <element name="Numero" type="integer" />                            
                             <element name="Indice_de_contenido" type="string" />
                             <element name="Secciones"> 
                                 <complexType>
@@ -144,19 +120,13 @@
                                                         <complexType>
                                                             <simpleContent>
                                                                 <extension base="string">
-                                                                    <attribute name="informacion" type="string" use="required"></attribute>
+                                                                    <attribute name="informacion" type="string" use="required" />
                                                                 </extension>
                                                             </simpleContent>
                                                         </complexType>
                                                     </element>   
                                                 </sequence>
-                                                    <attribute name="num_paginas" use="required">
-                                                        <simpleType>
-                                                            <restriction base="integer">
-                                                                <pattern value="[0-9]"></pattern>
-                                                            </restriction>
-                                                        </simpleType>
-                                                    </attribute>
+                                                    <attribute name="num_paginas" type="integer" use="required" />
                                             </complexType>
                                         </element>            
                                     </sequence>
@@ -166,12 +136,12 @@
                                 <attribute name="Id" use="required">
                                 <simpleType>
                                     <restriction base="string">
-                                        <pattern value="[R][0-9]{4}"></pattern>
+                                        <pattern value="[R][0-9]{4}" />
                                     </restriction>
                                 </simpleType>
                             </attribute>
-                            <attribute name="tipo_clase" type="string" use="required"></attribute>
-                            <attribute name="num_paginas" type="integer" use="required"></attribute>  
+                            <attribute name="tipo_clase" type="string" use="required" />
+                            <attribute name="num_paginas" type="integer" use="required" />  
                     </complexType> 
                 </element> 
             </sequence> 
