@@ -1,60 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE biblioteca [
 
-<!ELEMENT biblioteca (libros, revistas, periodicos)>
-    <!ELEMENT libros (libro*)>
-    <!ELEMENT revistas (revista*)>
-    <!ELEMENT periodicos (periodico*)>
+<!ELEMENT biblioteca (libros*, revistas*, periodicos*)>
 
+<!ELEMENT libros (libro*)>
     <!ELEMENT libro (titulo, sinopsis, indice, capitulo*)>
-    <!ATTLIST libro id_libro CDATA #REQUIRED>
-    <!ATTLIST libro tipo_clase (novela | infantil | didactico) #REQUIRED>
+        <!ATTLIST libro id_libro CDATA #REQUIRED>
+        <!ATTLIST libro tipo_clase CDATA #REQUIRED>
     <!ELEMENT titulo (#PCDATA)>
     <!ELEMENT sinopsis (#PCDATA)>
     <!ELEMENT indice (item*)>
-    <!ELEMENT capitulo (contenido_cap*)>
-    <!ATTLIST capitulo id_capitulo CDATA #REQUIRED>
-    <!ATTLIST capitulo titulo_cap CDATA #REQUIRED>
-    <!ATTLIST capitulo paginas CDATA #REQUI
-    <!ELEMENT item (#PCDATA)>
-    <!ATTLIST item pagina CDATA #REQUIRED>
+        <!ELEMENT item (#PCDATA)>
+            <!ATTLIST item pagina CDATA #REQUIRED>
+    <!ELEMENT capitulo (contenido*)>
+        <!ATTLIST capitulo id_capitulo CDATA #REQUIRED>
+        <!ATTLIST capitulo titulo_cap CDATA #REQUIRED>
+        <!ATTLIST capitulo paginas_c CDATA #REQUIRED>
+        <!ELEMENT contenido (#PCDATA)>
+            <!ATTLIST contenido enlace CDATA #REQUIRED>
 
-    <!ELEMENT contenido (#PCDATA)>
-    <!ATTLIST contenido enlace CDATA #REQUIRED>
-
+<!ELEMENT revistas (revista*)>
     <!ELEMENT revista (titulo_rev, numero, indice_rev, seccion_r*, paginas)>
-    <!ATTLIST  revista id_rev ID #REQUIRED>
-    <!ATTLIST revista tipo_clase CDATA #REQUIRED> 
+        <!ATTLIST revista id_rev CDATA #REQUIRED>
+        <!ATTLIST revista tipo_clase CDATA #REQUIRED>
     <!ELEMENT titulo_rev (#PCDATA)>
     <!ELEMENT numero (#PCDATA)>
-    <!ELEMENT indice_rev (item*)>
-    <!ATTLIST item pagina CDATA #REQUIRED>
+    <!ELEMENT indice_rev (item_r*)>
+        <!ELEMENT item_r (#PCDATA)>
+            <!ATTLIST item_r pagina_r CDATA #REQUIRED>
     <!ELEMENT seccion_r (contenido_sec*)>
     <!ATTLIST seccion_r titulo CDATA #REQUIRED>
-    <!ATTLIST seccion_r paginas CDATA #REQUIRED>
-    <!ELEMENT contenido_sec (#PCDATA)>
-    <!ATTLIST contenido_sec enlace CDATA #REQUIRED>
+    <!ATTLIST seccion_r paginas_s CDATA #REQUIRED>
+        <!ELEMENT contenido_sec (#PCDATA)>
+            <!ATTLIST contenido_sec enlace CDATA #REQUIRED>
     <!ELEMENT paginas (#PCDATA)>
 
+<!ELEMENT periodicos (periodico*)>
     <!ELEMENT periodico (secciones)>
-    <!ATTLIST periodico id_per ID #REQUIRED>
-    <!ATTLIST periodico tipo_clase (nacional | internacional) #REQUIRED>
-    <!ATTLIST periodico fecha_publicacion CDATA #REQUIRED>
-
+        <!ATTLIST periodico id CDATA #REQUIRED>
+        <!ATTLIST periodico  tipo_clase CDATA #REQUIRED>
+        <!ATTLIST periodico fecha_publicacion CDATA #REQUIRED>
     <!ELEMENT secciones (seccion_per*)>
-    <!ELEMENT seccion_per (articulo*, contenido_p*)>
-    <!ATTLIST seccion_per tipo_seccion (economica | opinion | deportes | nacional | internacional) #REQUIRED>
-
-    <!ELEMENT articulo (#PCDATA)>
-    <!ATTLIST articulo autor CDATA #REQUIRED>
-    <!ELEMENT contenido_p (#PCDATA)>
-    <!ATTLIST contenido_p enlace CDATA #REQUIRED>
-   ]>
+        <!ELEMENT seccion_per (articulo, contenido_p)>
+            <!ATTLIST seccion_per tipo_seccion CDATA #REQUIRED>
+                <!ELEMENT articulo (#PCDATA)>
+                    <!ATTLIST articulo autor CDATA #REQUIRED>
+                <!ELEMENT contenido_p (#PCDATA)>
+                    <!ATTLIST contenido_p enlace CDATA #REQUIRED>
+  ]>
 
 
 <biblioteca>
     <libros>
-        <libro id="L123" tipo_clase="novela">
+        <libro id_libro="L123" tipo_clase="novela">
             <titulo>Nadie queda atrás</titulo>
             <sinopsis></sinopsis>
              <indice>
@@ -64,33 +62,41 @@
                 <item pagina="38">Seguir</item>
                 <item pagina="54">Supremacía</item>
             </indice>         
-            <capitulo id_capitulo="L123C1" titulo_cap= "Para comenzar" paginas="14"> </capitulo>
-                <contenido enlace="capitulo1.txt"></contenido>           
-            <capitulo id_capitulo="L123C2" titulo_cap="Silencio" paginas="11"> </capitulo> 
-                <contenido enlace="capitulo2.txt" ></contenido>           
-             <capitulo id_capitulo="L123C3" titulo_cap="Tiempo y esfuerzo" paginas="12"></capitulo>
-                <contenido enlace="capitulo3.txt"></contenido>              
-            <capitulo id_capitulo="L123C4" titulo_cap= "Seguir" paginas="16"> </capitulo>
-                <contenido enlace="capitulo4.txt"></contenido>                
-            <capitulo id_capitulo="L123C5" titulo_cap= "Supremacía" paginas="12"></capitulo>  
-                <contenido enlace="capitulo5.txt"></contenido>            
+            <capitulo id_capitulo="L123C1" titulo_cap= "Para comenzar" paginas_c="14"> 
+                <contenido enlace="capitulo1.txt"></contenido> 
+            </capitulo>          
+            <capitulo id_capitulo="L123C2" titulo_cap="Silencio" paginas_c="11"> 
+                <contenido enlace="capitulo2.txt" ></contenido>  
+            </capitulo>          
+             <capitulo id_capitulo="L123C3" titulo_cap="Tiempo y esfuerzo" paginas_c="12">
+                <contenido enlace="capitulo3.txt"></contenido> 
+            </capitulo>             
+            <capitulo id_capitulo="L123C4" titulo_cap= "Seguir" paginas_c="16"> 
+                <contenido enlace="capitulo4.txt"></contenido>  
+            </capitulo>              
+            <capitulo id_capitulo="L123C5" titulo_cap= "Supremacía" paginas_c="12">
+                <contenido enlace="capitulo5.txt"></contenido> 
+            </capitulo>             
         </libro>
     </libros>
     <revistas>
-        <revista id="R001" tipo_clase="coches">
+        <revista id_rev="R001" tipo_clase="coches">
             <titulo_rev>Lanzamientos 2023</titulo_rev>
             <numero>1</numero>
             <indice_rev> 
-                <item pagina="1">Lo nuevo para este año</item>
-                <item pagina="9">Estilo y confort</item>
-                <item pagina="13">Los más vendidos</item>
+                <item_r pagina_r="1">Lo nuevo para este año</item_r>
+                <item_r pagina_r="9">Estilo y confort</item_r>
+                <item_r pagina_r="13">Los más vendidos</item_r>
             </indice_rev>
-            <seccion_r titulo="Lo nuevo para este año" paginas="8"> </seccion_r>
-                <contenido_sec enlace="url"></contenido_sec>      
-            <seccion_r titulo="Estilo y confort" paginas="5"> </seccion_r>
-                <contenido_sec enlace="url"></contenido_sec>  
-            <seccion_r titulo="Los más vendidos" paginas="10"></seccion_r>
-                <contenido_sec enlace="url"></contenido_sec>   
+            <seccion_r titulo="Lo nuevo para este año" paginas_s="8"> 
+                <contenido_sec enlace="url"></contenido_sec> 
+            </seccion_r>     
+            <seccion_r titulo="Estilo y confort" paginas_s="5"> 
+                <contenido_sec enlace="url"></contenido_sec> 
+            </seccion_r> 
+            <seccion_r titulo="Los más vendidos" paginas_s="10">
+                <contenido_sec enlace="url"></contenido_sec>
+            </seccion_r>   
             <paginas>23</paginas>
         </revista>
     </revistas>
