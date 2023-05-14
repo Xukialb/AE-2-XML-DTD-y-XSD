@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE biblioteca [
+
 <!ELEMENT biblioteca (libros, revistas, periodicos)>
     <!ELEMENT libros (libro*)>
     <!ELEMENT revistas (revista*)>
     <!ELEMENT periodicos (periodico*)>
 
     <!ELEMENT libro (titulo, sinopsis, indice, capitulo*)>
-    <!ATTLIST libro id CDATA #REQUIRED>
-    <!ATTLIST libro tipo_clase (novela | infantil | didáctico) #REQUIRED>
+    <!ATTLIST libro id_libro CDATA #REQUIRED>
+    <!ATTLIST libro tipo_clase (novela | infantil | didactico) #REQUIRED>
     <!ELEMENT titulo (#PCDATA)>
     <!ELEMENT sinopsis (#PCDATA)>
     <!ELEMENT indice (item*)>
@@ -21,28 +22,27 @@
     <!ELEMENT contenido (#PCDATA)>
     <!ATTLIST contenido enlace CDATA #REQUIRED>
 
-
     <!ELEMENT revista (titulo_rev, numero, indice_rev, seccion_r*, paginas)>
-    <!ATTLIST  revista id ID #REQUIRED>
+    <!ATTLIST  revista id_rev ID #REQUIRED>
     <!ATTLIST revista tipo_clase CDATA #REQUIRED> 
     <!ELEMENT titulo_rev (#PCDATA)>
     <!ELEMENT numero (#PCDATA)>
     <!ELEMENT indice_rev (item*)>
     <!ATTLIST item pagina CDATA #REQUIRED>
-    <!ELEMENT seccion_r (#PCDATA)>
+    <!ELEMENT seccion_r (contenido_sec*)>
     <!ATTLIST seccion_r titulo CDATA #REQUIRED>
     <!ATTLIST seccion_r paginas CDATA #REQUIRED>
-    <!ELEMENT contenido_rev (#PCDATA)>
-    <!ATTLIST contenido_rev enlace CDATA #REQUIRED>
+    <!ELEMENT contenido_sec (#PCDATA)>
+    <!ATTLIST contenido_sec enlace CDATA #REQUIRED>
     <!ELEMENT paginas (#PCDATA)>
 
-    <!ELEMENT periodico (secciones, articulo*)>
-    <!ATTLIST periodico id ID #REQUIRED>
+    <!ELEMENT periodico (secciones)>
+    <!ATTLIST periodico id_per ID #REQUIRED>
     <!ATTLIST periodico tipo_clase (nacional | internacional) #REQUIRED>
     <!ATTLIST periodico fecha_publicacion CDATA #REQUIRED>
 
     <!ELEMENT secciones (seccion_per*)>
-    <!ELEMENT seccion_per (articulo, contenido_p)>
+    <!ELEMENT seccion_per (articulo*, contenido_p*)>
     <!ATTLIST seccion_per tipo_seccion (economica | opinion | deportes | nacional | internacional) #REQUIRED>
 
     <!ELEMENT articulo (#PCDATA)>
@@ -56,15 +56,7 @@
     <libros>
         <libro id="L123" tipo_clase="novela">
             <titulo>Nadie queda atrás</titulo>
-            <sinopsis>La novela "Nadie queda atrás" presenta la historia de un grupo de personas que enfrentan 
-            desafíos y adversidades en su camino hacia la superación personal. Comenzando con el capítulo "Para 
-            comenzar", los personajes luchan por encontrar la motivación y la fuerza para comenzar un nuevo camino
-             en sus vidas. En "Silencio", se enfrentan a los obstáculos internos y externos que los detienen, 
-            mientras que en "Tiempo y esfuerzo" aprenden que el éxito requiere dedicación y paciencia. En "Seguir",
-            los personajes luchan por mantenerse en el camino correcto, mientras que en "Supremacía", enfrentan el 
-            desafío final para alcanzar sus metas. En resumen, "Nadie queda atrás" es una conmovedora novela sobre 
-            la lucha, la perseverancia y la superación personal, que inspirará a cualquier lector que se enfrente a
-            desafíos en su vida.</sinopsis>
+            <sinopsis></sinopsis>
              <indice>
                 <item pagina="1">Para comenzar</item>
                 <item pagina="15">Silencio</item>
@@ -94,11 +86,11 @@
                 <item pagina="13">Los más vendidos</item>
             </indice_rev>
             <seccion_r titulo="Lo nuevo para este año" paginas="8"> </seccion_r>
-            <contenido_rev enlace="url"></contenido_rev>      
+                <contenido_sec enlace="url"></contenido_sec>      
             <seccion_r titulo="Estilo y confort" paginas="5"> </seccion_r>
-            <contenido_rev enlace="url"></contenido_rev>  
+                <contenido_sec enlace="url"></contenido_sec>  
             <seccion_r titulo="Los más vendidos" paginas="10"></seccion_r>
-            <contenido_rev enlace="url"></contenido_rev>   
+                <contenido_sec enlace="url"></contenido_sec>   
             <paginas>23</paginas>
         </revista>
     </revistas>
